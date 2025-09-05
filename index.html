@@ -58,9 +58,9 @@
 <style>
 /* VAPI WIDGET CSS - GREEN STAR SOLAR BRANDING */
 :root {
-    --vapi-primary-color: #68ccd1; /* Green Star Solar Teal */
+    --vapi-primary-color: #8cc740; /* Green Star Solar Green */
     --vapi-accent-color: #ffffff;
-    --vapi-secondary-color: rgba(7,133,2,1); /* Green Star Solar Green */
+    --vapi-secondary-color: rgba(7,133,2,1); /* Green Star Solar Dark Green */
     --vapi-dark-bg: rgba(0,55,55,1); /* Green Star Solar Dark Teal */
     --vapi-dark: rgba(21,83,83,1);
     --vapi-glass-border: rgba(104, 204, 209, 0.3);
@@ -660,6 +660,11 @@ button[class*="vapi-btn"] {
         /* Optimize for touch */
         -webkit-tap-highlight-color: transparent !important;
         tap-highlight-color: transparent !important;
+        /* Enhanced touch target */
+        touch-action: manipulation !important;
+        user-select: none !important;
+        -webkit-user-select: none !important;
+        -webkit-touch-callout: none !important;
     }
 
     #vapi-chat-button img {
@@ -709,6 +714,9 @@ button[class*="vapi-btn"] {
         font-size: 16px !important;
         padding: 14px 18px !important;
         border-radius: 20px !important;
+        /* Prevent zoom on iOS */
+        -webkit-appearance: none !important;
+        appearance: none !important;
     }
 
     #vapi-send-button {
@@ -866,6 +874,12 @@ button[class*="vapi-btn"] {
     #vapi-text-messages, #vapi-voice-messages {
         /* Optimize Chrome scrolling */
         will-change: scroll-position !important;
+        contain: layout style !important;
+        overscroll-behavior: contain !important;
+    }
+    #vapi-chat-button {
+        /* Android Chrome touch optimization */
+        will-change: transform !important;
         contain: layout style !important;
     }
 }
