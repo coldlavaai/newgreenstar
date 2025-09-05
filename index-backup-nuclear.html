@@ -58,9 +58,9 @@
 <style>
 /* VAPI WIDGET CSS - GREEN STAR SOLAR BRANDING */
 :root {
-    --vapi-primary-color: #8cc740; /* Green Star Solar Teal */
+    --vapi-primary-color: #8cc740; /* Green Star Solar Green */
     --vapi-accent-color: #ffffff;
-    --vapi-secondary-color: rgba(7,133,2,1); /* Green Star Solar Green */
+    --vapi-secondary-color: rgba(7,133,2,1); /* Green Star Solar Dark Green */
     --vapi-dark-bg: rgba(0,55,55,1); /* Green Star Solar Dark Teal */
     --vapi-dark: rgba(21,83,83,1);
     --vapi-glass-border: rgba(104, 204, 209, 0.3);
@@ -226,12 +226,19 @@ button[class*="vapi-btn"] {
     transition: all 0.2s ease !important;
 }
 
+@media (min-width: 768px) {
 #vapi-chat-panel {
     position: absolute !important;
     bottom: 85px !important;
     right: 0 !important;
     width: 420px !important;
     height: 600px !important;
+}
+}
+#vapi-chat-panel {
+    position: absolute !important;
+    bottom: 85px !important;
+    right: 0 !important;
     background: linear-gradient(145deg, rgba(10, 10, 33, 0.25), rgba(10, 10, 33, 0.15)) !important;
     border-radius: 28px !important;
     border: 1px solid var(--vapi-glass-border) !important;
@@ -246,6 +253,12 @@ button[class*="vapi-btn"] {
     flex-direction: column !important;
     overflow: hidden !important;
     font-family: inherit !important;
+}
+@media (min-width: 768px) {
+#vapi-chat-panel {
+    width: 420px !important;
+    height: 600px !important;
+}
 }
 
 #vapi-chat-panel::before {
@@ -1112,6 +1125,27 @@ button[class*="vapi-btn"] {
 }
 
 /* Additional mobile fixes for very small screens */
+@media (max-width: 480px) {
+    .dmInner {
+        font-size: 14px !important;
+    }
+    
+    .dmRespRow, .dmRespRowsWrapper {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    .dmLargeBody .dmRespRow {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    .dmwidget-title,
+    #innerBar {
+        font-size: 16px !important;
+        padding: 0 10px !important;
+    }
+}
 @media (max-width: 480px) {
     .dmInner {
         font-size: 14px !important;
