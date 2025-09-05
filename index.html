@@ -673,23 +673,28 @@ button[class*="vapi-btn"] {
     }
 
     #vapi-chat-panel {
-        width: calc(100vw - 40px) !important;
-        height: 80vh !important;
-        max-height: 500px !important;
+        width: calc(100vw - 30px) !important;
+        height: 70vh !important;
+        max-height: 600px !important;
         bottom: 80px !important;
-        right: 0px !important;
+        right: 15px !important;
+        left: 15px !important;
         border-radius: 20px !important;
+        position: fixed !important;
         /* Enhanced mobile performance */
         -webkit-transform: translateZ(0) !important;
         transform: translateZ(0) !important;
         -webkit-overflow-scrolling: touch !important;
-        overflow-y: auto !important;
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
     }
 
     #vapi-chat-header {
-        padding: 20px 25px !important;
+        padding: 15px 20px !important;
         -webkit-transform: translateZ(0) !important;
         transform: translateZ(0) !important;
+        flex-shrink: 0 !important;
     }
 
     #vapi-chat-title {
@@ -697,17 +702,23 @@ button[class*="vapi-btn"] {
     }
 
     #vapi-text-messages, #vapi-voice-messages {
-        padding: 20px 25px !important;
+        padding: 15px 20px !important;
         /* Fix scrolling performance */
         -webkit-transform: translateZ(0) !important;
         transform: translateZ(0) !important;
         position: relative !important;
+        flex: 1 !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        min-height: 0 !important;
     }
 
     #vapi-input-area {
-        padding: 20px 25px !important;
+        padding: 15px 20px !important;
         -webkit-transform: translateZ(0) !important;
         transform: translateZ(0) !important;
+        flex-shrink: 0 !important;
+        border-top: 1px solid rgba(255,255,255,0.1) !important;
     }
 
     #vapi-message-input {
@@ -773,11 +784,16 @@ button[class*="vapi-btn"] {
     }
 
     #vapi-chat-panel {
-        width: calc(100vw - 30px) !important;
+        width: calc(100vw - 20px) !important;
         height: 75vh !important;
-        max-height: 450px !important;
+        max-height: 500px !important;
         bottom: 75px !important;
-        right: 0px !important;
+        right: 10px !important;
+        left: 10px !important;
+        position: fixed !important;
+        display: flex !important;
+        flex-direction: column !important;
+        overflow: hidden !important;
     }
 
     #vapi-chat-button {
