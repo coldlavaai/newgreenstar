@@ -226,12 +226,19 @@ button[class*="vapi-btn"] {
     transition: all 0.2s ease !important;
 }
 
+@media (min-width: 768px) {
 #vapi-chat-panel {
     position: absolute !important;
     bottom: 85px !important;
     right: 0 !important;
     width: 420px !important;
     height: 600px !important;
+}
+}
+#vapi-chat-panel {
+    position: absolute !important;
+    bottom: 85px !important;
+    right: 0 !important;
     background: linear-gradient(145deg, rgba(10, 10, 33, 0.25), rgba(10, 10, 33, 0.15)) !important;
     border-radius: 28px !important;
     border: 1px solid var(--vapi-glass-border) !important;
@@ -246,6 +253,12 @@ button[class*="vapi-btn"] {
     flex-direction: column !important;
     overflow: hidden !important;
     font-family: inherit !important;
+}
+@media (min-width: 768px) {
+#vapi-chat-panel {
+    width: 420px !important;
+    height: 600px !important;
+}
 }
 
 #vapi-chat-panel::before {
