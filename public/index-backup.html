@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Star Solar - Premium Solar Solutions</title>
+    <meta name="description" content="Transform your energy future with Green Star Solar. Premium solar installations, maximum savings, expert design.">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://lirp.cdn-website.com/8f142869/dms3rep/multi/opt/Greenstar_Solar_Logo_WHITE.TAG_STACKED-3x-488w.png" as="image">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Critical CSS -->
+    <style>
+        /* Critical CSS for above-the-fold content */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        /* Hero Section - Critical */
+        .hero {
+            height: 100vh;
+            min-height: 600px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+        }
+        
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .nav.visible {
+            transform: translateY(0);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #2a5298;
+        }
+        
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://lirp.cdn-website.com/8f142869/dms3rep/multi/opt/Greenstar_Solar_Logo_WHITE.TAG_STACKED-3x-488w.png" alt="Green Star Solar" id="nav-logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu" id="mobile-menu">
+                <span>☰</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="https://lirp.cdn-website.com/8f142869/dms3rep/multi/opt/Greenstar_Solar_Logo_WHITE.TAG_STACKED-3x-488w.png" alt="Green Star Solar" class="logo-main">
+            </div>
+            <h1 class="hero-title">Transform Your Energy Future</h1>
+            <p class="hero-subtitle">Our goal is to design and install a solar energy system that perfectly matches your unique energy goals</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn-primary">Get Free Quote</a>
+                <a href="#about" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about parallax-section" id="about">
+        <div class="parallax-bg" data-speed="0.5"></div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Leading Solar Innovation</h2>
+                <p class="section-subtitle">Pioneering sustainable energy solutions for homes and businesses across the UK</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="stat-card">
+                        <h3>5,000+</h3>
+                        <p>Solar Systems Installed</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>25 Years</h3>
+                        <p>System Warranty</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>£2M+</h3>
+                        <p>Customer Savings</p>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Why Choose Green Star Solar?</h3>
+                    <p>We specialize in designing and installing premium solar energy systems that are perfectly tailored to your unique energy requirements and financial goals.</p>
+                    <ul>
+                        <li>✓ Expert design and consultation</li>
+                        <li>✓ Premium quality components</li>
+                        <li>✓ Professional installation</li>
+                        <li>✓ Comprehensive warranties</li>
+                        <li>✓ Ongoing support and maintenance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services parallax-section" id="services">
+        <div class="parallax-bg" data-speed="0.3"></div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Solar Solutions</h2>
+                <p class="section-subtitle">Comprehensive solar services from consultation to maintenance</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Residential Solar</h3>
+                    <p>Custom solar solutions for homes, reducing your electricity bills and carbon footprint.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3>Commercial Solar</h3>
+                    <p>Large-scale solar installations for businesses looking to reduce operational costs.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔋</div>
+                    <h3>Battery Storage</h3>
+                    <p>Energy storage solutions to maximize your solar investment and energy independence.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>EV Charging</h3>
+                    <p>Solar-powered electric vehicle charging stations for sustainable transportation.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Maintenance</h3>
+                    <p>Ongoing maintenance and monitoring to ensure optimal system performance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Energy Monitoring</h3>
+                    <p>Real-time monitoring systems to track your energy production and consumption.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits parallax-section" id="benefits">
+        <div class="parallax-bg" data-speed="0.4"></div>
+        <div class="container">
+            <div class="benefits-content">
+                <div class="benefits-text">
+                    <h2 class="section-title">Why Go Solar?</h2>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">💰</div>
+                        <div class="benefit-content">
+                            <h3>Massive Savings</h3>
+                            <p>Reduce your electricity bills by up to 90% and protect against rising energy costs.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🌍</div>
+                        <div class="benefit-content">
+                            <h3>Environmental Impact</h3>
+                            <p>Significantly reduce your carbon footprint and contribute to a sustainable future.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📈</div>
+                        <div class="benefit-content">
+                            <h3>Increase Property Value</h3>
+                            <p>Solar installations can increase your property value by up to 4%.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">⚡</div>
+                        <div class="benefit-content">
+                            <h3>Energy Independence</h3>
+                            <p>Generate your own clean energy and reduce dependence on the grid.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefits-visual">
+                    <div class="savings-calculator">
+                        <h3>Potential Savings Calculator</h3>
+                        <div class="calc-input">
+                            <label>Monthly Electricity Bill (£)</label>
+                            <input type="number" id="monthly-bill" placeholder="150" value="150">
+                        </div>
+                        <div class="calc-result">
+                            <div class="savings-item">
+                                <span>Annual Savings:</span>
+                                <span id="annual-savings">£1,350</span>
+                            </div>
+                            <div class="savings-item">
+                                <span>25-Year Savings:</span>
+                                <span id="total-savings">£33,750</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary" onclick="openQuoteForm()">Get Accurate Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Proven Process</h2>
+                <p class="section-subtitle">From initial consultation to system activation in 4 simple steps</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Free Consultation</h3>
+                        <p>We assess your energy needs, roof suitability, and financial goals to design the perfect system.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Custom Design</h3>
+                        <p>Our engineers create a detailed system design optimized for your specific property and requirements.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Professional Installation</h3>
+                        <p>Our certified installers complete the installation with minimal disruption to your daily routine.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>System Activation</h3>
+                        <p>We handle all paperwork, permits, and grid connection for a seamless activation process.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact parallax-section" id="contact">
+        <div class="parallax-bg" data-speed="0.2"></div>
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="section-title">Get Your Free Quote</h2>
+                    <p>Ready to start your solar journey? Contact us today for a free, no-obligation consultation and quote.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>0800 123 4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>info@greenstarsolar.co.uk</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Visit Us</h4>
+                                <p>London, United Kingdom</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="quote-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="postcode">Postcode *</label>
+                            <input type="text" id="postcode" name="postcode" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="property-type">Property Type</label>
+                        <select id="property-type" name="property-type">
+                            <option value="detached">Detached House</option>
+                            <option value="semi-detached">Semi-Detached House</option>
+                            <option value="terraced">Terraced House</option>
+                            <option value="bungalow">Bungalow</option>
+                            <option value="commercial">Commercial Property</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="monthly-bill-form">Monthly Electricity Bill (£)</label>
+                        <input type="number" id="monthly-bill-form" name="monthly-bill" placeholder="150">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Additional Information</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your energy goals or any specific requirements..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary full-width">Get My Free Quote</button>
+                    
+                    <p class="form-disclaimer">
+                        By submitting this form, you agree to be contacted by Green Star Solar regarding your solar inquiry.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="https://lirp.cdn-website.com/8f142869/dms3rep/multi/opt/Greenstar_Solar_Logo_WHITE.TAG_STACKED-3x-488w.png" alt="Green Star Solar" class="footer-logo-img">
+                    </div>
+                    <p>Leading the UK's transition to sustainable solar energy with premium installations and expert service.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Residential Solar</a></li>
+                        <li><a href="#services">Commercial Solar</a></li>
+                        <li><a href="#services">Battery Storage</a></li>
+                        <li><a href="#services">EV Charging</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📞 0800 123 4567</li>
+                        <li>✉️ info@greenstarsolar.co.uk</li>
+                        <li>📍 London, United Kingdom</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Green Star Solar. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="LinkedIn">💼</a>
+                    <a href="#" aria-label="Instagram">📸</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Stylesheet (Non-Critical CSS) -->
+    <style>
+        /* Main Stylesheet */
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Typography */
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1e3c72;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: #666;
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Buttons */
+        .btn-primary, .btn-secondary {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .full-width {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            position: relative;
+            max-width: 800px;
+            padding: 2rem;
+        }
+        
+        .hero-logo {
+            margin-bottom: 2rem;
+        }
+        
+        .logo-main {
+            height: clamp(80px, 15vw, 120px);
+            width: auto;
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 3rem;
+            font-weight: 300;
+            line-height: 1.5;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            opacity: 0.7;
+            animation: bounce 2s infinite;
+        }
+        
+        .scroll-arrow {
+            width: 2rem;
+            height: 2rem;
+            border-right: 2px solid white;
+            border-bottom: 2px solid white;
+            transform: rotate(45deg);
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+        
+        /* Parallax Sections */
+        .parallax-section {
+            position: relative;
+            padding: 6rem 0;
+            overflow: hidden;
+        }
+        
+        .parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
+        
+        /* About Section */
+        .about {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8f0fe 100%);
+        }
+        
+        .section-header {
+            margin-bottom: 4rem;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .stat-card h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+        
+        .about-text h3 {
+            font-size: 2rem;
+            color: #1e3c72;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text ul {
+            list-style: none;
+            margin-top: 2rem;
+        }
+        
+        .about-text li {
+            padding: 0.5rem 0;
+            color: #555;
+        }
+        
+        /* Services Section */
+        .services {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+        }
+        
+        .services .section-title {
+            color: white;
+        }
+        
+        .services .section-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, background 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .service-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8f0fe 100%);
+        }
+        
+        .benefits-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .benefit-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-item:hover {
+            transform: translateX(10px);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            min-width: 60px;
+        }
+        
+        .benefit-content h3 {
+            font-size: 1.3rem;
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+        
+        .benefit-content p {
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        /* Savings Calculator */
+        .savings-calculator {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 2rem;
+        }
+        
+        .savings-calculator h3 {
+            color: #1e3c72;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .calc-input {
+            margin-bottom: 2rem;
+        }
+        
+        .calc-input label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .calc-input input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e0e7ff;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .calc-input input:focus {
+            outline: none;
+            border-color: #2a5298;
+        }
+        
+        .calc-result {
+            margin-bottom: 2rem;
+        }
+        
+        .savings-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            background: #f8f9ff;
+            margin-bottom: 0.5rem;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+        
+        .savings-item:last-child {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            font-size: 1.1rem;
+        }
+        
+        /* Process Section */
+        .process {
+            padding: 6rem 0;
+            background: white;
+        }
+        
+        .process-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 2rem;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 10px 30px rgba(30, 60, 114, 0.3);
+        }
+        
+        .step-content h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .step-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+        }
+        
+        .contact .section-title {
+            color: white;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .contact-methods {
+            margin-top: 2rem;
+        }
+        
+        .contact-method {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: center;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            min-width: 40px;
+        }
+        
+        .contact-method h4 {
+            margin-bottom: 0.25rem;
+            color: white;
+        }
+        
+        .contact-method p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: white;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #ff6b6b;
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .form-disclaimer {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            margin-top: 1rem;
+            line-height: 1.4;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section ul li a:hover {
+            color: white;
+        }
+        
+        .footer-logo-img {
+            height: 60px;
+            width: auto;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            display: block;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .about-grid,
+            .benefits-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-timeline {
+                grid-template-columns: 1fr;
+            }
+            
+            .parallax-section {
+                padding: 4rem 0;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            /* Fix parallax on mobile */
+            .parallax-bg {
+                background-attachment: scroll;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form {
+                padding: 1.5rem;
+            }
+        }
+        
+        /* Smooth scrolling and animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Loading Animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+
+    <!-- JavaScript -->
+    <script>
+        // Loading Animation
+        window.addEventListener('load', function() {
+            const loading = document.querySelector('.loading');
+            if (loading) {
+                loading.classList.add('hidden');
+                setTimeout(() => {
+                    loading.remove();
+                }, 500);
+            }
+        });
+
+        // Navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('nav');
+            const navLogo = document.getElementById('nav-logo');
+            
+            if (window.scrollY > 100) {
+                nav.classList.add('visible');
+                // Change logo to dark version when nav is visible
+                navLogo.src = navLogo.src.replace('WHITE', 'DARK');
+            } else {
+                nav.classList.remove('visible');
+                // Keep white logo in hero
+                navLogo.src = navLogo.src.replace('DARK', 'WHITE');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Parallax Effect
+        function updateParallax() {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.parallax-bg');
+            
+            parallaxElements.forEach(element => {
+                const speed = element.dataset.speed || 0.5;
+                const yPos = -(scrolled * speed);
+                element.style.transform = `translateY(${yPos}px)`;
+            });
+        }
+
+        // Throttled scroll listener for better performance
+        let ticking = false;
+        function handleScroll() {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    updateParallax();
+                    handleFadeIn();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Fade-in Animation
+        function handleFadeIn() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Add fade-in class to elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.service-card, .benefit-item, .stat-card, .process-step');
+            sections.forEach(section => {
+                section.classList.add('fade-in');
+            });
+        });
+
+        // Savings Calculator
+        function updateCalculator() {
+            const monthlyBill = document.getElementById('monthly-bill').value || 150;
+            const annualSavings = Math.round(monthlyBill * 12 * 0.75); // 75% savings
+            const totalSavings = Math.round(annualSavings * 25);
+            
+            document.getElementById('annual-savings').textContent = `£${annualSavings.toLocaleString()}`;
+            document.getElementById('total-savings').textContent = `£${totalSavings.toLocaleString()}`;
+        }
+
+        document.getElementById('monthly-bill')?.addEventListener('input', updateCalculator);
+
+        // Quote Form Functions
+        function openQuoteForm() {
+            document.getElementById('contact').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            
+            // Copy calculator value to form
+            const calculatorBill = document.getElementById('monthly-bill').value;
+            if (calculatorBill) {
+                document.getElementById('monthly-bill-form').value = calculatorBill;
+            }
+        }
+
+        // Form Submission
+        document.getElementById('quote-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic form validation
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const postcode = document.getElementById('postcode').value.trim();
+            
+            if (!name || !email || !postcode) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            if (!isValidEmail(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Simulate form submission
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Thank you! We\'ve received your quote request and will contact you within 24 hours.');
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu')?.addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Initialize calculator on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCalculator();
+            handleFadeIn(); // Run initial fade-in check
+        });
+
+        // Performance optimization - Reduce parallax on mobile
+        if (window.innerWidth <= 768) {
+            document.querySelectorAll('.parallax-bg').forEach(element => {
+                element.style.backgroundAttachment = 'scroll';
+            });
+        }
+    </script>
+
+    <!-- VAPI Chat Widget -->
+    <div id="vapi-hybrid-widget" style="position: fixed; bottom: 30px; right: 30px; z-index: 999999; font-family: 'Inter', sans-serif;">
+        <!-- Widget content will be loaded here -->
+        <button id="vapi-chat-button" style="
+            width: 60px; 
+            height: 60px; 
+            border-radius: 50%; 
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24); 
+            border: none; 
+            cursor: pointer; 
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        ">
+            <span style="font-size: 24px; color: white;">💬</span>
+        </button>
+        <div id="vapi-tooltip" style="
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            white-space: nowrap;
+            font-size: 14px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        ">
+            Chat with our Solar Expert
+        </div>
+    </div>
+
+    <script>
+        // Simple VAPI widget functionality
+        const vapiButton = document.getElementById('vapi-chat-button');
+        const vapiTooltip = document.getElementById('vapi-tooltip');
+        
+        vapiButton.addEventListener('mouseenter', () => {
+            vapiTooltip.style.opacity = '1';
+            vapiTooltip.style.transform = 'translateY(0)';
+        });
+        
+        vapiButton.addEventListener('mouseleave', () => {
+            vapiTooltip.style.opacity = '0';
+            vapiTooltip.style.transform = 'translateY(10px)';
+        });
+        
+        vapiButton.addEventListener('click', () => {
+            // Scroll to contact form as fallback
+            document.getElementById('contact').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+        
+        vapiButton.addEventListener('mouseenter', () => {
+            vapiButton.style.transform = 'scale(1.1)';
+            vapiButton.style.boxShadow = '0 15px 40px rgba(255, 107, 107, 0.4)';
+        });
+        
+        vapiButton.addEventListener('mouseleave', () => {
+            vapiButton.style.transform = 'scale(1)';
+            vapiButton.style.boxShadow = '0 10px 30px rgba(255, 107, 107, 0.3)';
+        });
+    </script>
+</body>
+</html>

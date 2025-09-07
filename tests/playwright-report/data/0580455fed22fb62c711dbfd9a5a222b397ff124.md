@@ -1,0 +1,224 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e11]:
+    - navigation [ref=e22]:
+      - menubar [ref=e23]:
+        - menuitem "HOME HOME /" [ref=e24]:
+          - link "HOME HOME" [ref=e25] [cursor=pointer]:
+            - /url: /
+            - generic: HOME HOME 
+          - text: /
+        - menuitem "ABOUT US ABOUT US /" [ref=e26]:
+          - link "ABOUT US ABOUT US" [ref=e27] [cursor=pointer]:
+            - /url: /#ABOUTUS
+            - generic: ABOUT US ABOUT US 
+          - text: /
+        - menuitem "SYSTEMS SYSTEMS" [ref=e28]:
+          - link "SYSTEMS SYSTEMS" [ref=e29] [cursor=pointer]:
+            - /url: /#Systems
+            - generic: SYSTEMS SYSTEMS 
+    - main [ref=e37]:
+      - generic [ref=e38]:
+        - generic [ref=e41]:
+          - heading "Our goal is to design and install a solar energy system that perfectly matches your unique energy goals" [level=2] [ref=e43]:
+            - generic [ref=e44]: Our goal is to design and install a solar energy system that perfectly matches your unique energy goals
+          - link "Learn More" [ref=e45] [cursor=pointer]:
+            - /url: /#Systems
+            - text: 
+            - generic [ref=e46] [cursor=pointer]: Learn More
+        - generic [ref=e49]:
+          - generic [ref=e52]:
+            - heading "BOOK YOUR FREE SURVEY" [level=3] [ref=e53]
+            - generic [ref=e55]:
+              - generic [ref=e56]:
+                - generic [ref=e57]:
+                  - generic [ref=e58]: "Name:"
+                  - textbox "Name:" [ref=e59]
+                - generic [ref=e60]:
+                  - generic [ref=e61]: "Email:"
+                  - textbox "Email:" [ref=e62]
+                - generic [ref=e63]:
+                  - generic [ref=e64]: "Phone:"
+                  - textbox "Phone:" [ref=e65]
+                - generic [ref=e66]:
+                  - generic [ref=e67]: "Message:"
+                  - textbox "Message:" [ref=e68]
+              - button "Send Message" [ref=e70] [cursor=pointer]
+          - generic [ref=e73]:
+            - heading "1" [level=1] [ref=e76]:
+              - generic [ref=e77]: "1"
+            - generic [ref=e78]:
+              - heading "Survey and Consultation" [level=4] [ref=e80]:
+                - generic [ref=e81]: Survey and Consultation
+              - paragraph [ref=e83]:
+                - generic [ref=e85]: We start with a face to face consultation to understand you energy needs and goals, followed by a thorough sight assessment to optimize system design
+            - heading "2" [level=1] [ref=e88]:
+              - generic [ref=e89]: "2"
+            - generic [ref=e90]:
+              - heading "Design and Quotation" [level=4] [ref=e92]:
+                - generic [ref=e93]: Design and Quotation
+              - paragraph [ref=e95]:
+                - generic [ref=e96]: Our expert designers create a tailored solar solution focused on maximizing efficiency and savings while minimizing cost
+        - generic [ref=e99]:
+          - heading "We're With You Every Step Of The Way" [level=2] [ref=e101]:
+            - generic [ref=e102]: We're With You Every Step Of The Way
+          - generic [ref=e103]:
+            - paragraph [ref=e104]:
+              - generic [ref=e105]: To ensure your solar energy system is a perfect match for your unique energy goals, we take a highly personalised approach. Our process begins with an in-depth face-to-face consultation to understand your energy usage patterns, environmental goals, and budget considerations. From there, our expert surveyors/designers conduct a thorough site assessment, analysing factors like roof orientation, shading, sunlight, cable runs and location of inverters and batteries to determine the optimal system design. Using cutting-edge technology and high-quality products, we then design a customised solution that maximises energy efficiency and cost savings. Finally, our skilled in-house technicians handle the entire installation process with precision, ensuring that your system is ready to perform reliably and efficiently for years to come.
+            - paragraph [ref=e106]:
+              - generic [ref=e107]: Once your system is up and running, our commitment continues with comprehensive in-person aftercare appointment, app training and ongoing system monitoring. Through an intuitive app, you can track and understand your energy production. We also include a 5-year insurance-backed guarantee for your extra peace of mind, ensuring that your investment is fully protected. Throughout the entire process, we stay in close communication so you feel informed and confident at every step of your solar journey and long into the future.
+        - heading "Learn More About your Solar Options" [level=2] [ref=e112]:
+          - generic [ref=e113]: Learn More About your Solar Options
+        - generic [ref=e116]:
+          - link "SOLAR PANELS FOR HOME" [ref=e117] [cursor=pointer]:
+            - /url: solar-panels-for-home.html
+            - text: 
+            - generic [ref=e118] [cursor=pointer]: SOLAR PANELS FOR HOME
+          - link "BATTERY STORAGE FOR HOME" [ref=e119] [cursor=pointer]:
+            - /url: /solar-panels-for-home#battystorageforhome
+            - text: 
+            - generic [ref=e120] [cursor=pointer]: BATTERY STORAGE FOR HOME
+          - link "SOLAR PANELS FOR BUSINESS" [ref=e121] [cursor=pointer]:
+            - /url: /landing-page
+            - text: 
+            - generic [ref=e122] [cursor=pointer]: SOLAR PANELS FOR BUSINESS
+          - link "BATTERY STORAGE FOR BUSINESS" [ref=e123] [cursor=pointer]:
+            - /url: /landing-page
+            - text: 
+            - generic [ref=e124] [cursor=pointer]: BATTERY STORAGE FOR BUSINESS
+        - heading "Latest Testimonials" [level=1] [ref=e134]:
+          - generic [ref=e135]: Latest Testimonials
+        - generic [ref=e137]:
+          - generic [ref=e138]:
+            - img [ref=e140]
+            - generic [ref=e146]:
+              - paragraph [ref=e147]:
+                - generic [ref=e148]: Incredibly helpful from the beginning, with no pushy sales tactics. Jack answered all our questions thoroughly, and the technical knowledge and communication from both the survey team and the install team was excellent. Tom and his team arrived on time, did a great job, and left everything clean and tidy. Highly recommended.
+              - paragraph [ref=e149]
+            - generic [ref=e151]:
+              - img
+            - generic [ref=e154]:
+              - paragraph [ref=e156]:
+                - strong [ref=e157]: Judy T
+              - paragraph [ref=e159]:
+                - generic [ref=e160]: 28 Oct
+          - generic [ref=e161]:
+            - img [ref=e163]
+            - generic [ref=e169]:
+              - paragraph [ref=e170]
+              - paragraph [ref=e171]:
+                - generic [ref=e172]: It’s a pleasure to leave this positive review. From our initial contact with Jon our surveyor to the Admin team, the install team and Tom the Electrician, the entire experience was seamless. We’re already benefiting from the solar energy, and we can’t say enough about the professionalism of everyone involved. This was good, honest service, well done to all involved.
+              - paragraph [ref=e173]
+            - generic [ref=e175]:
+              - img
+            - generic [ref=e178]:
+              - paragraph [ref=e180]:
+                - generic [ref=e181]: Clive S
+              - paragraph [ref=e183]:
+                - generic [ref=e184]: 31 Oct
+          - generic [ref=e185]:
+            - img [ref=e187]
+            - generic [ref=e193]:
+              - paragraph [ref=e194]:
+                - generic [ref=e195]: From quoting all the way through to installation, commissioning and aftercare this company has been fantastic. The system was well specified and priced compared to other quotes received. Jack, Jon and the chaps that did the install and were all very professional in there approach. We made the right choice.
+              - paragraph [ref=e196]
+            - generic [ref=e198]:
+              - img
+            - generic [ref=e201]:
+              - paragraph [ref=e203]:
+                - generic [ref=e204]: Paula P
+              - paragraph [ref=e206]:
+                - generic [ref=e207]: 1 Nov
+          - generic [ref=e208]:
+            - img [ref=e210]
+            - paragraph [ref=e217]:
+              - generic [ref=e219]:
+                - text: Greenstar are a top class company to deal with. Their whole approach is absolutely unique in this day and age. Totally seamless transition from start to finish with all due respects to Jack who organised everything from the scaffold, panel install and all the paperwork and aftercare. Thank you Jack and the team, very much appreciated.
+                - text: Very satisfied customer
+            - generic [ref=e221]:
+              - img
+            - generic [ref=e224]:
+              - paragraph [ref=e226]:
+                - generic [ref=e227]: Robert G
+              - paragraph [ref=e229]:
+                - generic [ref=e230]: 6 Nov
+    - generic [ref=e236]:
+      - generic [ref=e238]:
+        - generic [ref=e239]:
+          - heading "Let’s talk!" [level=2] [ref=e241]:
+            - generic [ref=e242]: Let’s talk!
+          - generic [ref=e244]: Have a question or comment? Let us know.
+          - generic [ref=e247]:
+            - generic [ref=e248]:
+              - generic [ref=e249]:
+                - generic [ref=e250]: "Name:"
+                - textbox "Name:" [ref=e251]
+              - generic [ref=e252]:
+                - generic [ref=e253]: "Email:"
+                - textbox "Email:" [ref=e254]
+              - generic [ref=e255]:
+                - generic [ref=e256]: "Phone:"
+                - textbox "Phone:" [ref=e257]
+              - generic [ref=e258]:
+                - generic [ref=e259]: "Message:"
+                - textbox "Message:" [ref=e260]
+            - button "Send Message" [ref=e262] [cursor=pointer]
+        - generic [ref=e263]:
+          - generic [ref=e265]: "Email us:"
+          - heading "info@greenstarsolar.co.uk" [level=3] [ref=e267]:
+            - generic [ref=e268]: info@greenstarsolar.co.uk
+          - paragraph [ref=e270]:
+            - generic [ref=e271]: "Office: 02382 123763"
+          - generic [ref=e272]:
+            - paragraph [ref=e273]:
+              - generic [ref=e274]: "Address:"
+            - paragraph [ref=e275]:
+              - generic [ref=e276]: Greenstar
+            - paragraph [ref=e277]:
+              - generic [ref=e278]: 4500 Parkway
+            - paragraph [ref=e279]:
+              - generic [ref=e280]: Solent Business Park
+            - paragraph [ref=e281]:
+              - generic [ref=e283]: Whiteley
+            - paragraph [ref=e284]:
+              - generic [ref=e286]: Fareham
+            - paragraph [ref=e287]:
+              - generic [ref=e288]: PO15 7AZ
+      - separator [ref=e290]
+      - generic [ref=e292]:
+        - generic [ref=e298]:
+          - generic [ref=e299]: © 2025
+          - paragraph [ref=e301]: All Rights Reserved | Greenstar Solar LTD
+        - link "PRIVACY/TERMS" [ref=e303] [cursor=pointer]:
+          - /url: privacy-policy.html
+          - text: 
+          - generic [ref=e304] [cursor=pointer]: PRIVACY/TERMS
+  - generic:
+    - generic:
+      - generic: 
+    - generic: "Share by:"
+  - generic [ref=e305]:
+    - generic: Ask Sophie?
+    - button "Talk to Sophie" [ref=e306] [cursor=pointer]:
+      - img "Green Star Solar" [ref=e307] [cursor=pointer]
+    - dialog "Sophie • Green Star Assistant" [ref=e308]:
+      - generic [ref=e309]:
+        - generic [ref=e310]:
+          - img "Logo" [ref=e311]
+          - heading "Sophie • Green Star Assistant" [level=3] [ref=e312]
+        - button "Close" [ref=e313] [cursor=pointer]: ×
+      - log [ref=e314]:
+        - generic [ref=e315]: Hi! I'm Sophie, your Green Star assistant. I'm here to help you discover how solar energy can transform your home or business. What would you like to know about our solar solutions?
+      - generic [ref=e316]:
+        - generic [ref=e317]:
+          - button "Text Chat" [ref=e318] [cursor=pointer]
+          - button "Voice Call" [ref=e319] [cursor=pointer]
+        - generic [ref=e320]:
+          - textbox "Message to Sophie" [active] [ref=e321]
+          - button "Send message" [ref=e322] [cursor=pointer]: Send
+        - text: 🎙️
+        - link "Powered by Cold Lava" [ref=e324] [cursor=pointer]:
+          - /url: https://coldlava.ai
+```

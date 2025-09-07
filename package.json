@@ -1,0 +1,23 @@
+{
+  "name": "greenstar",
+  "version": "1.0.0",
+  "description": "A professional, **production-ready** AI chat widget powered by VAPI, designed for seamless integration into any website. Features both voice and text chat capabilities with a premium UI/UX and **enterprise-grade security**.",
+  "main": "test-mobile-optimization.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coldlavaai/greenstar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coldlavaai/greenstar/issues"
+  },
+  "homepage": "https://github.com/coldlavaai/greenstar#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.55.0"
+  }
+}

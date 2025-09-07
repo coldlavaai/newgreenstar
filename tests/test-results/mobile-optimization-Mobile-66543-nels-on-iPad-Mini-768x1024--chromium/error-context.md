@@ -1,0 +1,162 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e11]:
+    - text: HOME  / ABOUT US  / SYSTEMS 
+    - generic [ref=e15]:
+      - separator [ref=e17]
+      - generic [ref=e19]: SOLAR PANELS FOR HOME
+      - separator [ref=e21]
+    - main [ref=e24]:
+      - generic [ref=e25]:
+        - link "← Back" [ref=e29] [cursor=pointer]:
+          - /url: /#Systems
+          - text: 
+          - generic [ref=e30] [cursor=pointer]: ← Back
+        - generic [ref=e33]:
+          - heading "SOLAR PANELS FOR YOUR HOME" [level=1] [ref=e35]:
+            - generic [ref=e36]: SOLAR PANELS FOR YOUR HOME
+          - generic [ref=e38]:
+            - generic [ref=e40]:
+              - paragraph [ref=e41]:
+                - generic [ref=e42]: With energy prices at an all-time high, now is an ideal time to invest in solar panels and battery storage. We offer a variety of options, including solar panels, battery storage systems, or a combined setup tailored to meet your home’s energy needs. Our custom-designed systems feature highly efficient Aiko Neostar 2S N-type mono glass panels, known for their ethical sourcing and top-tier performance. Paired with the latest hybrid inverters and batteries from leading brands like Fox ESS, SolarEdge, and EcoFlow, our solutions provide state-of-the-art solar power to help you achieve your energy goals.
+              - paragraph [ref=e43]
+            - generic [ref=e46]:
+              - list [ref=e48]:
+                - listitem [ref=e49]
+                - listitem [ref=e50]: 
+                - listitem [ref=e51]
+                - listitem [ref=e52]
+                - listitem [ref=e53]
+                - listitem [ref=e54]
+              - list:
+                - listitem [ref=e55]:
+                  - link "" [ref=e56] [cursor=pointer]:
+                    - /url: ""
+                - listitem [ref=e57]:
+                  - link "" [ref=e58] [cursor=pointer]:
+                    - /url: ""
+        - generic [ref=e65]:
+          - paragraph [ref=e67]:
+            - generic [ref=e69]: Discover the AIKO Neostar 2S
+          - generic [ref=e73]:
+            - list [ref=e74]:
+              - listitem [ref=e75]:
+                - text: •
+                - generic [ref=e76]: "Efficiency: up to 23.1%"
+              - listitem [ref=e77]:
+                - text: •
+                - generic [ref=e78]: "Low performance degradation: ≤1% in the first year, and ≤ 0.3% per year in the following years"
+              - listitem [ref=e79]:
+                - text: •
+                - generic [ref=e80]: "Premium warranty: 25-year product warranty and 30-year performance warranty"
+              - listitem [ref=e81]:
+                - text: •
+                - generic [ref=e82]: "Better temperature coefficient: -0.26%/°C"
+              - listitem [ref=e83]:
+                - text: •
+                - generic [ref=e84]: Partial shading built in cell optimization
+              - listitem [ref=e85]:
+                - text: •
+                - generic [ref=e87]: Lower O&M cost High temperature restriction and micro-crack resistance, front grid free, ensuring roof safety, reducing module failure
+              - listitem [ref=e88]:
+                - text: •
+                - generic [ref=e89]: Full blacked out effect and bezel-less edge for a modern stylish design
+              - listitem [ref=e90]:
+                - text: •
+                - generic [ref=e91]: Red dot award winner 2023 and ethically sourced
+            - paragraph [ref=e92]
+            - paragraph [ref=e93]
+        - generic [ref=e102]:
+          - text: 
+          - generic [ref=e103]:
+            - heading "Batter storage for your home" [level=2] [ref=e105]:
+              - generic [ref=e106]: Batter storage for your home
+            - list [ref=e108]:
+              - listitem [ref=e109]:
+                - generic [ref=e110]:
+                  - heading "1. Get the maximum power from your panels" [level=3] [ref=e112]
+                  - img [ref=e115] [cursor=pointer]
+                - paragraph [ref=e118]: If you don’t have a battery, and your panels don’t produce enough energy for your needs, your system draws on the grid, and you pay for this electricity. Batteries give you much more control over your energy because they reduce your vulnerability to peak time electricity prices. They can also power your home during a power cut.
+              - listitem [ref=e119]:
+                - generic [ref=e120]:
+                  - heading "2. You can store cheap energy from the grid" [level=3] [ref=e122]
+                  - img [ref=e125] [cursor=pointer]
+                - paragraph [ref=e128]: Although it may be difficult to believe during the current energy crisis when rates are so high, energy prices fall overnight to as low as 7 pence per kwh, and energy suppliers are paid to take energy off the grid. Use the app to charge your batteries with cheap overnight electricity for use during peak rate times.
+              - listitem [ref=e129]:
+                - generic [ref=e130]:
+                  - heading "3. Reduce your carbon footprint" [level=3] [ref=e132]
+                  - img [ref=e135] [cursor=pointer]
+                - paragraph [ref=e138]: Solar batteries bring your property closer to energy independence and self-sufficiency. Solar energy creates far less pollution than fossil fuels and reduces your home’s carbon footprint for years. They also improve your homes EPC rating and its value
+              - listitem [ref=e139]:
+                - generic [ref=e140]:
+                  - heading "4. Slash your electricity bill" [level=3] [ref=e142]
+                  - img [ref=e145] [cursor=pointer]
+                - paragraph [ref=e148]: One of the most significant benefits of battery storage is that they slash your electricity costs as you avoid the fees associated with utility companies. Some people turn to solar batteries to disconnect from the grid entirely
+              - listitem [ref=e149]:
+                - generic [ref=e150]:
+                  - heading "5. Virtually no maintenance." [level=3] [ref=e152]
+                  - img [ref=e155] [cursor=pointer]
+                - paragraph [ref=e158]: At this point, it’s also worth mentioning that batteries require very little maintenance once installed. They are also as quiet as a mouse.
+    - generic [ref=e168]:
+      - generic [ref=e170]:
+        - generic [ref=e171]:
+          - heading "Let’s talk!" [level=2] [ref=e173]:
+            - generic [ref=e174]: Let’s talk!
+          - generic [ref=e176]: Have a question or comment? Let us know.
+          - generic [ref=e179]:
+            - generic [ref=e180]:
+              - generic [ref=e181]:
+                - generic [ref=e182]: "Name:"
+                - textbox "Name:" [ref=e183]
+              - generic [ref=e184]:
+                - generic [ref=e185]: "Email:"
+                - textbox "Email:" [ref=e186]
+              - generic [ref=e187]:
+                - generic [ref=e188]: "Phone:"
+                - textbox "Phone:" [ref=e189]
+              - generic [ref=e190]:
+                - generic [ref=e191]: "Message:"
+                - textbox "Message:" [ref=e192]
+            - button "Send Message" [ref=e194] [cursor=pointer]
+        - generic [ref=e195]:
+          - generic [ref=e197]: "Email us:"
+          - heading "info@greenstarsolar.co.uk" [level=3] [ref=e199]:
+            - generic [ref=e200]: info@greenstarsolar.co.uk
+          - paragraph [ref=e202]:
+            - generic [ref=e203]: "Office: 02382 123763"
+          - generic [ref=e204]:
+            - paragraph [ref=e205]:
+              - generic [ref=e206]: "Address:"
+            - paragraph [ref=e207]:
+              - generic [ref=e208]: Greenstar
+            - paragraph [ref=e209]:
+              - generic [ref=e210]: 4500 Parkway
+            - paragraph [ref=e211]:
+              - generic [ref=e212]: Solent Business Park
+            - paragraph [ref=e213]:
+              - generic [ref=e215]: Whiteley
+            - paragraph [ref=e216]:
+              - generic [ref=e218]: Fareham
+            - paragraph [ref=e219]:
+              - generic [ref=e220]: PO15 7AZ
+      - separator [ref=e222]
+      - generic [ref=e224]:
+        - generic [ref=e230]:
+          - generic [ref=e231]: © 2025
+          - paragraph [ref=e233]: All Rights Reserved | Greenstar Solar LTD
+        - link "PRIVACY/TERMS" [ref=e235] [cursor=pointer]:
+          - /url: privacy-policy.html
+          - text: 
+          - generic [ref=e236] [cursor=pointer]: PRIVACY/TERMS
+  - generic:
+    - generic:
+      - generic: 
+    - generic: "Share by:"
+  - generic [ref=e237]:
+    - generic: Ask Sophie?
+    - button "Talk to Sophie" [ref=e238] [cursor=pointer]:
+      - img "Green Star Solar" [ref=e239] [cursor=pointer]
+    - text: 🎙️
+```

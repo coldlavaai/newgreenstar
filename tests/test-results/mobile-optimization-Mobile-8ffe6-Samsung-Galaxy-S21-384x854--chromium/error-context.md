@@ -1,0 +1,186 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e11]:
+    - navigation [ref=e22]:
+      - menubar [ref=e23]:
+        - menuitem "HOME HOME /" [ref=e24]:
+          - link "HOME HOME" [ref=e25] [cursor=pointer]:
+            - /url: /
+            - generic: HOME HOME 
+          - text: /
+        - menuitem "ABOUT US ABOUT US /" [ref=e26]:
+          - link "ABOUT US ABOUT US" [ref=e27] [cursor=pointer]:
+            - /url: /#ABOUTUS
+            - generic: ABOUT US ABOUT US 
+          - text: /
+        - menuitem "SYSTEMS SYSTEMS" [ref=e28]:
+          - link "SYSTEMS SYSTEMS" [ref=e29] [cursor=pointer]:
+            - /url: /#Systems
+            - generic: SYSTEMS SYSTEMS 
+    - generic [ref=e36]:
+      - separator [ref=e38]
+      - generic [ref=e40]: Privacy Policy
+      - separator [ref=e42]
+    - main [ref=e45]:
+      - generic [ref=e49]:
+        - link "←BACK" [ref=e50] [cursor=pointer]:
+          - /url: /
+          - text: 
+          - generic [ref=e51] [cursor=pointer]: ←BACK
+        - generic [ref=e52]:
+          - paragraph [ref=e53]:
+            - generic [ref=e54]: PRIVACY POLICY
+          - paragraph [ref=e55]
+          - paragraph [ref=e56]:
+            - generic [ref=e57]: "Effective Date: 02/10/2024"
+          - paragraph [ref=e58]:
+            - generic [ref=e59]: 1. Introduction
+          - paragraph [ref=e60]:
+            - generic [ref=e61]: Greenstar Solar LTD ("we," "our," or "us") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal information when you use our services, visit our website, or engage with us.
+          - paragraph [ref=e62]
+          - paragraph [ref=e63]:
+            - generic [ref=e64]: 2. Information We Collect
+          - paragraph [ref=e65]:
+            - generic [ref=e66]: "We may collect various types of personal information, including but not limited to:"
+          - paragraph [ref=e67]:
+            - generic [ref=e68]: Contact information (e.g., name, email address, phone number)
+          - paragraph [ref=e69]:
+            - generic [ref=e70]: Billing and payment information
+          - paragraph [ref=e71]:
+            - generic [ref=e72]: Technical information (e.g., IP address, browser information)
+          - paragraph [ref=e73]:
+            - generic [ref=e74]: Usage information (e.g., website interactions, preferences)
+          - paragraph [ref=e75]:
+            - generic [ref=e76]: Marketing and communication preferences
+          - paragraph [ref=e77]
+          - paragraph [ref=e78]:
+            - generic [ref=e79]: 3. How We Use Your Information
+          - paragraph [ref=e80]:
+            - generic [ref=e81]: "We may use your personal information for the following purposes:"
+          - paragraph [ref=e82]:
+            - generic [ref=e83]: Providing and improving our services
+          - paragraph [ref=e84]:
+            - generic [ref=e85]: Processing orders and payments
+          - paragraph [ref=e86]:
+            - generic [ref=e87]: Responding to your inquiries and requests
+          - paragraph [ref=e88]:
+            - generic [ref=e89]: Sending you important updates and information
+          - paragraph [ref=e90]:
+            - generic [ref=e91]: Marketing and promotional activities (with your consent)
+          - paragraph [ref=e92]
+          - paragraph [ref=e93]:
+            - generic [ref=e94]: 4. Data Sharing and Disclosure
+          - paragraph [ref=e95]:
+            - generic [ref=e96]: "We may share your personal information with:"
+          - paragraph [ref=e97]:
+            - generic [ref=e98]: Third-party service providers for necessary functions (e.g., payment processing, website hosting)
+          - paragraph [ref=e99]:
+            - generic [ref=e100]: Regulatory authorities when required by law
+          - paragraph [ref=e101]:
+            - generic [ref=e102]: Business partners for joint promotions (with your consent)
+          - paragraph [ref=e103]
+          - paragraph [ref=e104]:
+            - generic [ref=e105]: 5. Your Rights
+          - paragraph [ref=e106]:
+            - generic [ref=e107]: "You have the following rights regarding your personal information:"
+          - paragraph [ref=e108]:
+            - generic [ref=e109]: "Access: Request access to the personal information we hold about you."
+          - paragraph [ref=e110]:
+            - generic [ref=e111]: "Correction: Request corrections to inaccurate or incomplete data."
+          - paragraph [ref=e112]:
+            - generic [ref=e113]: "Deletion: Request the deletion of your personal information, subject to legal obligations."
+          - paragraph [ref=e114]:
+            - generic [ref=e115]: "Object: Object to the processing of your data for certain purposes."
+          - paragraph [ref=e116]:
+            - generic [ref=e117]: "Restrict: Request restrictions on how we process your personal information."
+          - paragraph [ref=e118]:
+            - generic [ref=e119]: "Portability: Request a copy of your personal data in a machine-readable format."
+          - paragraph [ref=e120]
+          - paragraph [ref=e121]:
+            - generic [ref=e122]: 6. Cookies and Tracking Technologies
+          - paragraph [ref=e123]:
+            - generic [ref=e124]: Our website may use cookies and similar tracking technologies to enhance your experience and collect usage data. You can manage your cookie preferences through your browser settings.
+          - paragraph [ref=e125]
+          - paragraph [ref=e126]:
+            - generic [ref=e127]: 7. Security
+          - paragraph [ref=e128]:
+            - generic [ref=e129]: We employ reasonable security measures to protect your personal information from unauthorized access, disclosure, alteration, and destruction.
+          - paragraph [ref=e130]
+          - paragraph [ref=e131]:
+            - generic [ref=e132]: 8. Changes to this Privacy Policy
+          - paragraph [ref=e133]:
+            - generic [ref=e134]: We may update this Privacy Policy to reflect changes in our practices or legal requirements. We will notify you of any significant changes via email or a notice on our website.
+          - paragraph [ref=e135]
+          - paragraph [ref=e136]:
+            - generic [ref=e137]: 9. Contact Us
+          - paragraph [ref=e138]:
+            - generic [ref=e139]: "If you have questions or concerns about this Privacy Policy or your personal information, please contact us at:"
+          - paragraph [ref=e140]:
+            - generic [ref=e141]:
+              - text: Greenstar Solar LTD
+              - text: 02382 123763
+              - text: info@Greenstarsolar.co.uk
+          - paragraph [ref=e142]
+    - generic [ref=e148]:
+      - generic [ref=e150]:
+        - generic [ref=e151]:
+          - heading "Let’s talk!" [level=2] [ref=e153]:
+            - generic [ref=e154]: Let’s talk!
+          - generic [ref=e156]: Have a question or comment? Let us know.
+          - generic [ref=e159]:
+            - generic [ref=e160]:
+              - generic [ref=e161]:
+                - generic [ref=e162]: "Name:"
+                - textbox "Name:" [ref=e163]
+              - generic [ref=e164]:
+                - generic [ref=e165]: "Email:"
+                - textbox "Email:" [ref=e166]
+              - generic [ref=e167]:
+                - generic [ref=e168]: "Phone:"
+                - textbox "Phone:" [ref=e169]
+              - generic [ref=e170]:
+                - generic [ref=e171]: "Message:"
+                - textbox "Message:" [ref=e172]
+            - button "Send Message" [ref=e174] [cursor=pointer]
+        - generic [ref=e175]:
+          - generic [ref=e177]: "Email us:"
+          - heading "info@greenstarsolar.co.uk" [level=3] [ref=e179]:
+            - generic [ref=e180]: info@greenstarsolar.co.uk
+          - paragraph [ref=e182]:
+            - generic [ref=e183]: "Office: 02382 123763"
+          - generic [ref=e184]:
+            - paragraph [ref=e185]:
+              - generic [ref=e186]: "Address:"
+            - paragraph [ref=e187]:
+              - generic [ref=e188]: Greenstar
+            - paragraph [ref=e189]:
+              - generic [ref=e190]: 4500 Parkway
+            - paragraph [ref=e191]:
+              - generic [ref=e192]: Solent Business Park
+            - paragraph [ref=e193]:
+              - generic [ref=e195]: Whiteley
+            - paragraph [ref=e196]:
+              - generic [ref=e198]: Fareham
+            - paragraph [ref=e199]:
+              - generic [ref=e200]: PO15 7AZ
+      - separator [ref=e202]
+      - generic [ref=e204]:
+        - generic [ref=e210]:
+          - generic [ref=e211]: © 2025
+          - paragraph [ref=e213]: All Rights Reserved | Greenstar Solar LTD
+        - link "PRIVACY/TERMS" [ref=e215] [cursor=pointer]:
+          - /url: /privacy-policy
+          - text: 
+          - generic [ref=e216] [cursor=pointer]: PRIVACY/TERMS
+  - generic:
+    - generic:
+      - generic: 
+    - generic: "Share by:"
+  - generic [ref=e217]:
+    - generic: Ask Sophie?
+    - button "Talk to Sophie" [ref=e218] [cursor=pointer]:
+      - img "Green Star Solar" [ref=e219] [cursor=pointer]
+    - text: 🎙️
+```
