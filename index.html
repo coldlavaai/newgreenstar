@@ -2452,151 +2452,23 @@
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@vapi-ai/web@latest/dist/index.js"></script>
-
 <script>
+// 🔧 VAPI Web Integration - Proper Implementation
 (function() {
   'use strict';
   
-  // 🔒 SECURITY: Tamper Detection and Protection
-  const SECURITY = {
-    // Rate limiting
-    requestCount: 0,
-    lastRequestTime: 0,
-    maxRequestsPerMinute: 20,
-    
-    // Security monitoring
-    logSecurityEvent: function(event, details) {
-      if (typeof fetch === 'function') {
-        try {
-          fetch('/api/security/log', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-              event: event,
-              details: details,
-              timestamp: Date.now(),
-              url: window.location.href
-            })
-          }).catch(() => {}); // Fail silently
-        } catch(e) {}
-      }
-    },
-    
-    // Input validation and sanitization
-    validateInput: function(input) {
-      if (!input || typeof input !== 'string') return false;
-      if (input.length > 500) return false;
-      if (/<script|javascript:|on\w+=/i.test(input)) {
-        this.logSecurityEvent('XSS_ATTEMPT', {input: input.substring(0, 100)});
-        return false;
-      }
-      if (input.includes('eval(') || input.includes('Function(')) {
-        this.logSecurityEvent('CODE_INJECTION_ATTEMPT', {input: input.substring(0, 100)});
-        return false;
-      }
-      return true;
-    },
-    
-    // Sanitize text content
-    sanitizeText: function(text) {
-      if (!text || typeof text !== 'string') return '';
-      return text.replace(/[<>&"']/g, function(char) {
-        const chars = {
-          '<': '&lt;',
-          '>': '&gt;',
-          '&': '&amp;',
-          '"': '&quot;',
-          "'": '&#39;'
-        };
-        return chars[char] || char;
-      });
-    },
-    
-    // Rate limiting check
-    checkRateLimit: function() {
-      const now = Date.now();
-      if (now - this.lastRequestTime > 60000) {
-        this.requestCount = 0;
-        this.lastRequestTime = now;
-      }
-      
-      if (this.requestCount >= this.maxRequestsPerMinute) {
-        this.logSecurityEvent('RATE_LIMIT_EXCEEDED', {count: this.requestCount});
-        return false;
-      }
-      
-      this.requestCount++;
-      return true;
-    },
-    
-    // Developer tools detection
-    detectDevTools: function() {
-      const threshold = 160;
-      const devtools = {
-        open: false,
-        orientation: null
-      };
-      
-      if (window.outerHeight - window.innerHeight > threshold || 
-          window.outerWidth - window.innerWidth > threshold) {
-        devtools.open = true;
-        devtools.orientation = window.outerHeight - window.innerHeight > threshold ? 'vertical' : 'horizontal';
-      }
-      
-      return devtools;
-    }
+  // Configuration with your credentials
+  const CONFIG = {
+    publicKey: 'b3f38fb7-8541-4e3e-8708-5d49c3f54f00',
+    assistantId: 'cb76e1bc-dc2d-4ea8-84a1-c17499ed6387'
   };
   
-  // 🔒 SECURITY: Protected Configuration - Production Credentials
-  const CONFIG = (function() {
-    return Object.freeze({
-      apiEndpoint: '/api/vapi/chat',
-      configEndpoint: '/api/vapi/config',
-      fallbackEndpoint: 'https://api.vapi.ai/chat',
-      publicKey: 'b3f38fb7-8541-4e3e-8708-5d49c3f54f00',
-      assistantId: 'cb76e1bc-dc2d-4ea8-84a1-c17499ed6387',
-      maxRetries: 3,
-      retryDelay: 1000
-    });
-  })();
-  
-  // 🔒 SECURITY: Prevent context menu and text selection
-  document.addEventListener('contextmenu', function(e) {
-    if (e.target.closest('#vapi-hybrid-widget')) {
-      e.preventDefault();
-      SECURITY.logSecurityEvent('CONTEXT_MENU_BLOCKED', {target: e.target.tagName});
-    }
-  });
-  
-  // 🔒 SECURITY: Prevent F12 and other dev tools shortcuts
-  document.addEventListener('keydown', function(e) {
-    if ((e.key === 'F12') || 
-        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
-        (e.ctrlKey && e.shiftKey && e.key === 'C') ||
-        (e.ctrlKey && e.key === 'U')) {
-      e.preventDefault();
-      SECURITY.logSecurityEvent('DEV_TOOLS_SHORTCUT_BLOCKED', {key: e.key});
-    }
-  });
-  
-  // 🔒 SECURITY: Monitor for developer tools
-  setInterval(function() {
-    const devtools = SECURITY.detectDevTools();
-    if (devtools.open) {
-      SECURITY.logSecurityEvent('DEV_TOOLS_DETECTED', {orientation: devtools.orientation});
-    }
-  }, 5000);
-  
-  // Protected widget state
+  // Widget state
   let widgetState = {
     isOpen: false,
     currentMode: 'text',
     isVoiceActive: false,
-    vapiInstance: null,
-    previousChatId: null,
-    lastUserMessage: '',
-    config: null
+    vapiInstance: null
   };
   
   // Elements cache
@@ -2614,76 +2486,85 @@
     voiceControls: document.getElementById('vapi-voice-controls')
   };
   
-  // 🔒 SECURITY: Fetch configuration securely from server
-  async function initializeSecurely() {
-    try {
-      const response = await fetch(CONFIG.configEndpoint);
-      if (response.ok) {
-        widgetState.config = await response.json();
-        return true;
-      }
-    } catch (error) {
-      console.warn('Secure config unavailable, using fallback mode');
-      SECURITY.logSecurityEvent('CONFIG_FALLBACK', {error: error.message});
-    }
-    return false;
-  }
-  
-  // Initialize widget
-  async function initializeWidget() {
-    // Try to get secure configuration first
-    const hasSecureConfig = await initializeSecurely();
+  // Initialize VAPI using the HTML script tag method
+  function initializeVapi() {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js';
+    script.defer = true;
+    script.async = true;
     
-    if (!hasSecureConfig) {
-      // Use production credentials directly
-      initializeWithProductionCredentials();
-    } else {
-      // Use secure config
-      initializeWithSecureConfig();
-    }
-    
-    // Set up event listeners
-    setupEventListeners();
-  }
-  
-  function initializeWithProductionCredentials() {
-    // Set up VAPI instance with production credentials
-    if (typeof Vapi !== 'undefined') {
+    script.onload = function() {
       try {
-        widgetState.vapiInstance = new Vapi(CONFIG.publicKey);
-        setupVoiceEventListeners();
-        console.log('✅ VAPI initialized successfully with production credentials');
+        if (window.vapiSDK) {
+          widgetState.vapiInstance = window.vapiSDK.run({
+            apiKey: CONFIG.publicKey,
+            assistant: CONFIG.assistantId,
+            config: {
+              showButton: false, // We have our own button
+              position: 'bottom-right',
+              offset: '20px',
+              width: '50px',
+              height: '50px'
+            }
+          });
+          console.log('✅ VAPI initialized successfully');
+          setupVoiceEventListeners();
+        }
       } catch (error) {
         console.error('VAPI initialization failed:', error);
-        showSecurityWarning();
+        addVoiceMessage('Voice service unavailable. Please try text chat.', 'system');
       }
-    }
-  }
-  
-  function initializeWithSecureConfig() {
-    if (typeof Vapi !== 'undefined' && widgetState.config) {
-      try {
-        widgetState.vapiInstance = new Vapi({
-          apiKey: widgetState.config.publicApiKey,
-          assistant: widgetState.config.assistantId
-        });
-        setupVoiceEventListeners();
-        console.log('✅ VAPI initialized successfully with secure credentials');
-      } catch (error) {
-        console.error('VAPI initialization failed:', error);
-        showSecurityWarning();
-      }
-    }
-  }
-  
-  function showSecurityWarning() {
-    const warningDiv = document.createElement('div');
-    warningDiv.className = 'vapi-message vapi-message-system';
-    warningDiv.textContent = 'Security Notice: Widget running in limited mode. Please contact support for full functionality.';
-    elements.textMessages.appendChild(warningDiv);
+    };
     
-    // Disable voice functionality
-    elements.modeButtons[1].style.display = 'none';
+    document.head.appendChild(script);
+  }
+  
+  function setupVoiceEventListeners() {
+    if (!widgetState.vapiInstance) return;
+    
+    // Set up VAPI event listeners
+    widgetState.vapiInstance.on('call-start', () => {
+      widgetState.isVoiceActive = true;
+      elements.voiceButton.className = 'active';
+      elements.voiceButton.textContent = 'End Call';
+      addVoiceMessage('Call started. Speak now...', 'system');
+      console.log('Voice call started');
+    });
+    
+    widgetState.vapiInstance.on('call-end', () => {
+      widgetState.isVoiceActive = false;
+      elements.voiceButton.className = '';
+      elements.voiceButton.textContent = 'Start Call';
+      addVoiceMessage('Call ended.', 'system');
+      console.log('Voice call ended');
+    });
+    
+    widgetState.vapiInstance.on('speech-start', () => {
+      addVoiceMessage('Listening...', 'system');
+    });
+    
+    widgetState.vapiInstance.on('speech-end', (data) => {
+      if (data?.transcript) {
+        addVoiceMessage(data.transcript, 'user');
+      }
+    });
+    
+    widgetState.vapiInstance.on('message', (message) => {
+      console.log('VAPI message:', message);
+      if (message?.type === 'transcript' && message?.transcript) {
+        if (message.role === 'assistant') {
+          addVoiceMessage(message.transcript, 'assistant');
+        }
+      }
+    });
+    
+    widgetState.vapiInstance.on('error', (error) => {
+      console.error('VAPI Error:', error);
+      addVoiceMessage('An error occurred. Please try again.', 'system');
+      if (widgetState.isVoiceActive) {
+        endVoiceCall();
+      }
+    });
   }
   
   function setupEventListeners() {
@@ -2716,50 +2597,6 @@
     });
   }
   
-  function setupVoiceEventListeners() {
-    if (!widgetState.vapiInstance) return;
-    
-    widgetState.vapiInstance.on('call-start', () => {
-      widgetState.isVoiceActive = true;
-      elements.voiceButton.className = 'active';
-      elements.voiceButton.textContent = 'End Call';
-      widgetState.lastUserMessage = '';
-      addVoiceMessage('Call started. Speak now...', 'system');
-    });
-    
-    widgetState.vapiInstance.on('call-end', () => {
-      widgetState.isVoiceActive = false;
-      elements.voiceButton.className = '';
-      elements.voiceButton.textContent = 'Start Call';
-      addVoiceMessage('Call ended.', 'system');
-    });
-    
-    widgetState.vapiInstance.on('speech-start', () => {
-      addVoiceMessage('Listening...', 'system');
-    });
-    
-    widgetState.vapiInstance.on('speech-end', (data) => {
-      if (data?.transcript) {
-        widgetState.lastUserMessage = data.transcript;
-        addVoiceMessage(data.transcript, 'user');
-      }
-    });
-    
-    widgetState.vapiInstance.on('message', (message) => {
-      if (message?.content) {
-        addVoiceMessage(message.content, 'assistant');
-      }
-    });
-    
-    widgetState.vapiInstance.on('error', (error) => {
-      console.error('VAPI Error:', error);
-      addVoiceMessage('An error occurred. Please try again.', 'system');
-      if (widgetState.isVoiceActive) {
-        widgetState.vapiInstance?.stop();
-      }
-    });
-  }
-  
   function toggleWidget() {
     if (widgetState.isOpen) {
       closeWidget();
@@ -2771,15 +2608,17 @@
   function openWidget() {
     widgetState.isOpen = true;
     elements.panel?.classList.add('open');
-    elements.messageInput?.focus();
+    if (widgetState.currentMode === 'text') {
+      elements.messageInput?.focus();
+    }
   }
   
   function closeWidget() {
     widgetState.isOpen = false;
     elements.panel?.classList.remove('open');
     
-    if (widgetState.isVoiceActive && widgetState.vapiInstance) {
-      widgetState.vapiInstance.stop();
+    if (widgetState.isVoiceActive) {
+      endVoiceCall();
     }
   }
   
@@ -2799,6 +2638,7 @@
       elements.voiceControls.style.display = 'none';
       elements.panel?.classList.add('vapi-text-mode');
       elements.panel?.classList.remove('vapi-voice-mode');
+      elements.messageInput?.focus();
     } else {
       elements.textMessages.style.display = 'none';
       elements.voiceMessages.style.display = 'flex';
@@ -2809,81 +2649,28 @@
     }
   }
   
-  async function handleSendMessage() {
+  function handleSendMessage() {
     const message = elements.messageInput?.value?.trim();
     if (!message) return;
     
-    // 🔒 SECURITY: Validate and sanitize input
-    if (!SECURITY.validateInput(message)) {
-      addTextMessage('Invalid message. Please avoid special characters and keep messages under 500 characters.', 'system');
-      return;
-    }
-    
-    // 🔒 SECURITY: Check rate limit
-    if (!SECURITY.checkRateLimit()) {
-      addTextMessage('Too many requests. Please wait a moment before sending another message.', 'system');
-      return;
-    }
-    
-    const sanitizedMessage = SECURITY.sanitizeText(message);
     elements.messageInput.value = '';
-    
-    addTextMessage(sanitizedMessage, 'user');
+    addTextMessage(message, 'user');
     showTypingIndicator();
     
-    try {
-      // First try secure backend endpoint
-      const response = await attemptSecureChat(sanitizedMessage);
-      if (response) {
-        hideTypingIndicator();
-        const assistantMessage = extractAssistantMessage(response);
-        if (assistantMessage) {
-          addTextMessage(assistantMessage, 'assistant');
-        }
-        return;
-      }
-    } catch (error) {
-      console.warn('Secure chat failed, cannot proceed without credentials');
-      SECURITY.logSecurityEvent('SECURE_CHAT_FAILED', {error: error.message});
-    }
-    
-    hideTypingIndicator();
-    addTextMessage('Service temporarily unavailable. Please try again later or contact support.', 'system');
-  }
-  
-  async function attemptSecureChat(message) {
-    if (!CONFIG.apiEndpoint) return null;
-    
-    try {
-      const response = await fetch(CONFIG.apiEndpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          input: message,
-          previousChatId: widgetState.previousChatId
-        })
-      });
-      
-      if (response.ok) {
-        const data = await response.json();
-        if (data.chatId) {
-          widgetState.previousChatId = data.chatId;
-        }
-        return data;
-      }
-    } catch (error) {
-      console.warn('Secure backend unavailable');
-    }
-    
-    return null;
+    // Simulate response for text chat (you can connect this to your backend)
+    setTimeout(() => {
+      hideTypingIndicator();
+      const responses = [
+        "Thanks for your message! I'd be happy to help you with solar panel information.",
+        "Great question! Our solar panels can significantly reduce your electricity bills.",
+        "I can help you learn more about our solar solutions. What specific information are you looking for?"
+      ];
+      const response = responses[Math.floor(Math.random() * responses.length)];
+      addTextMessage(response, 'assistant');
+    }, 1000);
   }
   
   function handleVoiceToggle() {
-    if (!widgetState.vapiInstance) {
-      addVoiceMessage('Voice functionality requires secure configuration. Please contact support.', 'system');
-      return;
-    }
-    
     if (widgetState.isVoiceActive) {
       endVoiceCall();
     } else {
@@ -2893,27 +2680,27 @@
   
   function startVoiceCall() {
     if (!widgetState.vapiInstance) {
-      addVoiceMessage('Voice service unavailable.', 'system');
+      addVoiceMessage('Voice service is initializing. Please try again in a moment.', 'system');
       return;
     }
     
     try {
+      console.log('Starting voice call with assistant:', CONFIG.assistantId);
       widgetState.vapiInstance.start(CONFIG.assistantId);
     } catch (error) {
       console.error('Failed to start voice call:', error);
-      SECURITY.logSecurityEvent('VOICE_START_ERROR', {error: error.message});
-      elements.voiceButton.className = '';
-      elements.voiceButton.textContent = 'Start Call';
       addVoiceMessage('Failed to start call. Please try again.', 'system');
     }
   }
   
   function endVoiceCall() {
     try {
+      if (widgetState.vapiInstance) {
+        widgetState.vapiInstance.stop();
+      }
       widgetState.isVoiceActive = false;
       elements.voiceButton.className = '';
       elements.voiceButton.textContent = 'Start Call';
-      widgetState.vapiInstance?.stop();
     } catch (error) {
       console.error('Failed to end voice call:', error);
     }
@@ -2922,7 +2709,7 @@
   function addTextMessage(text, sender) {
     const messageDiv = document.createElement('div');
     messageDiv.className = `vapi-message vapi-message-${sender}`;
-    messageDiv.textContent = text; // Safe from XSS
+    messageDiv.textContent = text;
     elements.textMessages?.appendChild(messageDiv);
     scrollToBottom(elements.textMessages);
   }
@@ -2930,38 +2717,19 @@
   function addVoiceMessage(text, sender) {
     const messageDiv = document.createElement('div');
     messageDiv.className = `vapi-voice-message vapi-voice-message-${sender}`;
-    messageDiv.textContent = text; // Safe from XSS
+    messageDiv.textContent = text;
     elements.voiceMessages?.appendChild(messageDiv);
     scrollToBottom(elements.voiceMessages);
   }
   
   function showTypingIndicator() {
-    hideTypingIndicator(); // Remove any existing indicator
+    hideTypingIndicator();
     
     const typingDiv = document.createElement('div');
     typingDiv.id = 'vapi-typing-indicator';
     typingDiv.className = 'vapi-message vapi-message-assistant';
+    typingDiv.textContent = 'Sophie is typing...';
     
-    // Safe static HTML for typing indicator
-    const dotsContainer = document.createElement('div');
-    dotsContainer.style.cssText = 'display: flex; align-items: center; gap: 6px; padding: 4px 0;';
-    
-    const label = document.createElement('span');
-    label.textContent = 'Sophie is typing';
-    label.style.marginRight = '8px';
-    dotsContainer.appendChild(label);
-    
-    // Create dots safely
-    for (let i = 0; i < 3; i++) {
-      const dot = document.createElement('div');
-      dot.style.cssText = `
-        width: 6px; height: 6px; background: currentColor; border-radius: 50%;
-        animation: pulse 1.5s infinite; animation-delay: ${i * 0.2}s; opacity: 0.4;
-      `;
-      dotsContainer.appendChild(dot);
-    }
-    
-    typingDiv.appendChild(dotsContainer);
     elements.textMessages?.appendChild(typingDiv);
     scrollToBottom(elements.textMessages);
   }
@@ -2979,24 +2747,18 @@
     }
   }
   
-  function extractAssistantMessage(data) {
-    if (data?.output && Array.isArray(data.output) && data.output.length > 0) {
-      const lastOutput = data.output[data.output.length - 1];
-      if (lastOutput?.content) return lastOutput.content;
-    }
-    
-    if (data?.message) return data.message;
-    if (data?.response) return data.response;
-    if (typeof data === 'string') return data;
-    
-    return 'I apologize, but I encountered an issue processing your request. Please try again.';
+  // Initialize everything
+  function initialize() {
+    setupEventListeners();
+    initializeVapi();
+    console.log('Widget initialized with VAPI integration');
   }
   
-  // Initialize on DOM ready
+  // Start when DOM is ready
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeWidget);
+    document.addEventListener('DOMContentLoaded', initialize);
   } else {
-    initializeWidget();
+    initialize();
   }
   
 })();
