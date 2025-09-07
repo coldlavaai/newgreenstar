@@ -1502,15 +1502,15 @@
         });
     </script>
 
-    <!-- Working VAPI Chat Widget -->
+    <!-- Complete Working VAPI Chat Widget - Production Version -->
     <style>
-    /* VAPI Widget CSS Variables - Customized with Your Color Palette */
+    /* VAPI Widget CSS Variables - Adapted for Green Star Color Palette */
     :root {
-      --vapi-primary-color: var(--sage-500);
-      --vapi-secondary-color: var(--black-olive-600); 
+      --vapi-primary-color: rgba(173, 174, 136, 1);
+      --vapi-secondary-color: rgba(44, 52, 33, 1); 
       --vapi-accent-color: #ffffff;
-      --vapi-dark: linear-gradient(145deg, var(--charcoal-300), var(--outer-space-400));
-      --vapi-glass-border: var(--sage-700);
+      --vapi-dark: linear-gradient(145deg, rgba(68, 76, 92, 0.95), rgba(75, 89, 97, 0.9));
+      --vapi-glass-border: rgba(173, 174, 136, 0.3);
     }
 
     #vapi-hybrid-widget {
@@ -1525,6 +1525,7 @@
         -ms-user-select: none;
     }
 
+    /* Prevent text selection and context menu */
     #vapi-hybrid-widget * {
         user-select: none !important;
         -webkit-user-select: none !important;
@@ -1578,6 +1579,16 @@
     #vapi-chat-panel.open ~ #vapi-tooltip {
         opacity: 0 !important;
         transform: translateY(10px) scale(0.8) !important;
+    }
+
+    #vapi-hybrid-widget *,
+    #vapi-hybrid-widget *::before,
+    #vapi-hybrid-widget *::after {
+        box-sizing: border-box;
+    }
+
+    #vapi-speech-bubble {
+        display: none !important;
     }
 
     #vapi-chat-button {
@@ -1757,6 +1768,45 @@
         backdrop-filter: blur(5px) !important;
     }
 
+    .vapi-voice-message {
+        margin-bottom: 20px !important;
+        padding: 16px 20px !important;
+        border-radius: 18px !important;
+        max-width: 85% !important;
+        word-wrap: break-word !important;
+        line-height: 1.5 !important;
+        position: relative !important;
+        font-size: 14px !important;
+    }
+
+    .vapi-voice-message-user {
+        background: linear-gradient(135deg, var(--sage-500), var(--sage-600)) !important;
+        color: var(--charcoal-500) !important;
+        margin-left: auto !important;
+        border-bottom-right-radius: 8px !important;
+        box-shadow: 0 4px 12px rgba(173, 174, 136, 0.3) !important;
+    }
+
+    .vapi-voice-message-assistant {
+        background: rgba(255, 255, 255, 0.12) !important;
+        color: var(--sage-800) !important;
+        border: 1px solid rgba(173, 174, 136, 0.3) !important;
+        border-left: 4px solid var(--sage-500) !important;
+        border-bottom-left-radius: 8px !important;
+        backdrop-filter: blur(10px) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .vapi-voice-message-system {
+        background: rgba(173, 174, 136, 0.15) !important;
+        color: var(--charcoal-600) !important;
+        text-align: center !important;
+        font-size: 13px !important;
+        font-style: italic !important;
+        margin: 12px auto !important;
+        backdrop-filter: blur(5px) !important;
+    }
+
     #vapi-input-area {
         padding: 25px 30px !important;
         border-top: 1px solid var(--sage-700) !important;
@@ -1849,6 +1899,10 @@
         box-shadow: 0 6px 16px rgba(173, 174, 136, 0.4) !important;
     }
 
+    #vapi-send-button:active {
+        transform: translateY(0) !important;
+    }
+
     #vapi-voice-controls {
         display: none !important;
         text-align: center !important;
@@ -1886,11 +1940,19 @@
         50% { opacity: 0.7; }
     }
 
-    /* Mobile Optimization */
+    /* ⚡ MOBILE OPTIMIZATION - Complete Implementation */
+    /* Professional Dynamic Experience with Enhanced Security */
+
+    /* TABLET AND MOBILE FOUNDATION (up to 768px) */
     @media (max-width: 768px) {
         #vapi-hybrid-widget {
             bottom: 20px !important;
             right: 20px !important;
+            /* Universal hardware acceleration */
+            -webkit-transform: translate3d(0, 0, 0) !important;
+            transform: translate3d(0, 0, 0) !important;
+            -webkit-backface-visibility: hidden !important;
+            backface-visibility: hidden !important;
             z-index: 999999 !important;
         }
 
@@ -1898,6 +1960,28 @@
             bottom: 75px !important;
             font-size: 13px !important;
             padding: 10px 14px !important;
+            /* Enhanced mobile performance */
+            -webkit-transform: translateZ(0) !important;
+            transform: translateZ(0) !important;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+            backdrop-filter: blur(10px) !important;
+        }
+        
+        #vapi-hybrid-widget:hover #vapi-tooltip {
+            opacity: 1 !important;
+            transform: scale(1) translateY(0) !important;
+        }
+
+        #vapi-chat-button {
+            width: 70px !important;
+            height: 70px !important;
+            /* Touch-friendly sizing maintained */
+            min-width: 70px !important;
+            min-height: 70px !important;
+            /* Performance optimizations */
+            -webkit-transform: translateZ(0) !important;
+            transform: translateZ(0) !important;
         }
 
         #vapi-chat-panel {
@@ -1906,412 +1990,858 @@
             max-height: 550px !important;
             bottom: 90px !important;
             right: 20px !important;
+            border-radius: 20px !important;
+            /* Enhanced mobile performance */
+            -webkit-transform: translateZ(0) !important;
+            transform: translateZ(0) !important;
+            -webkit-overflow-scrolling: touch !important;
+            overflow-y: auto !important;
+        }
+
+        #vapi-chat-header {
+            padding: 20px 25px !important;
+            -webkit-transform: translateZ(0) !important;
+            transform: translateZ(0) !important;
+        }
+
+        #vapi-chat-title {
+            font-size: 18px !important;
+        }
+
+        #vapi-text-messages, #vapi-voice-messages {
+            padding: 20px 25px !important;
+            /* Fix scrolling performance */
+            -webkit-transform: translateZ(0) !important;
+            transform: translateZ(0) !important;
+            position: relative !important;
+        }
+
+        .vapi-message, .vapi-voice-message {
+            max-width: 85% !important;
+            font-size: 14px !important;
+            padding: 14px 18px !important;
+            border-radius: 16px !important;
+            /* Performance optimization */
+            -webkit-transform: translateZ(0) !important;
+            transform: translateZ(0) !important;
+        }
+
+        #vapi-mode-toggle {
+            margin-bottom: 15px !important;
+            padding: 4px !important;
+            border-radius: 12px !important;
+        }
+
+        .vapi-mode-button {
+            padding: 12px 16px !important;
+            font-size: 13px !important;
+            border-radius: 8px !important;
+            /* Touch-friendly sizing */
+            min-height: 44px !important;
+            touch-action: manipulation !important;
+        }
+
+        #vapi-input-area {
+            padding: 20px 25px !important;
+            -webkit-transform: translateZ(0) !important;
+            transform: translateZ(0) !important;
+        }
+
+        #vapi-message-input {
+            padding: 14px 18px !important;
+            font-size: 16px !important;
+            border-radius: 12px !important;
+            /* Prevent zoom on iOS */
+            -webkit-appearance: none !important;
+            appearance: none !important;
+            /* Touch optimization */
+            touch-action: manipulation !important;
+            min-height: 44px !important;
+        }
+
+        #vapi-send-button {
+            padding: 14px 20px !important;
+            font-size: 14px !important;
+            border-radius: 12px !important;
+            /* Touch-friendly minimum size */
+            min-width: 60px !important;
+            min-height: 44px !important;
+            touch-action: manipulation !important;
+        }
+
+        #vapi-voice-button {
+            padding: 16px 24px !important;
+            font-size: 14px !important;
+            border-radius: 12px !important;
+            /* Touch optimization */
+            min-height: 44px !important;
+            touch-action: manipulation !important;
+        }
+    }
+
+    /* SMALL MOBILE SPECIFIC (480px and below) */
+    @media (max-width: 480px) {
+        #vapi-hybrid-widget {
+            bottom: 15px !important;
+            right: 15px !important;
+        }
+
+        #vapi-chat-panel {
+            width: calc(100vw - 30px) !important;
+            height: 80vh !important;
+            max-height: 500px !important;
+            bottom: 75px !important;
+            right: 15px !important;
+            border-radius: 18px !important;
+            /* Enhanced small screen performance */
+            contain: layout style paint !important;
+        }
+
+        #vapi-chat-button {
+            width: 60px !important;
+            height: 60px !important;
+            /* Maintain touch-friendly size */
+            min-width: 60px !important;
+            min-height: 60px !important;
+        }
+
+        #vapi-tooltip {
+            bottom: 65px !important;
+            font-size: 12px !important;
+            padding: 8px 12px !important;
+            max-width: 150px !important;
+            white-space: nowrap !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+        }
+
+        #vapi-text-messages, #vapi-voice-messages {
+            padding: 15px 18px !important;
+            /* Small screen scroll optimization */
+            scrollbar-width: thin !important;
+        }
+
+        #vapi-input-area {
+            padding: 15px 18px !important;
+        }
+
+        #vapi-chat-header {
+            padding: 15px 18px !important;
+            /* Flexible header for small screens */
+            flex-wrap: wrap !important;
+            gap: 8px !important;
+        }
+
+        #vapi-chat-title {
+            font-size: 16px !important;
+            flex-shrink: 1 !important;
+            min-width: 0 !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+        }
+
+        #vapi-close-button {
+            flex-shrink: 0 !important;
+            width: 32px !important;
+            height: 32px !important;
+            min-width: 32px !important;
+            min-height: 32px !important;
+        }
+
+        .vapi-message, .vapi-voice-message {
+            max-width: 90% !important;
+            font-size: 13px !important;
+            padding: 12px 15px !important;
+            border-radius: 14px !important;
+            line-height: 1.4 !important;
+        }
+        
+        #vapi-message-input {
+            font-size: 16px !important;
+            padding: 12px 16px !important;
+            border-radius: 12px !important;
+            /* Maintain minimum height for touch */
+            min-height: 44px !important;
+        }
+        
+        #vapi-send-button {
+            padding: 12px 16px !important;
+            font-size: 13px !important;
+            border-radius: 12px !important;
+            min-width: 50px !important;
+            min-height: 44px !important;
+        }
+        
+        #vapi-voice-button {
+            padding: 14px 20px !important;
+            font-size: 13px !important;
+            border-radius: 12px !important;
+            min-height: 44px !important;
+        }
+        
+        .vapi-mode-button {
+            padding: 10px 12px !important;
+            font-size: 12px !important;
+            border-radius: 8px !important;
+            min-height: 40px !important;
+        }
+    }
+
+    /* EXTRA SMALL SCREENS (320px and below) */
+    @media screen and (max-width: 320px) {
+        #vapi-chat-panel {
+            width: calc(100vw - 20px) !important;
+            right: 10px !important;
+            bottom: 70px !important;
+            border-radius: 16px !important;
+        }
+        
+        #vapi-hybrid-widget {
+            bottom: 12px !important;
+            right: 12px !important;
+        }
+        
+        #vapi-chat-button {
+            width: 56px !important;
+            height: 56px !important;
+        }
+        
+        #vapi-tooltip {
+            bottom: 60px !important;
+            font-size: 11px !important;
+            padding: 6px 10px !important;
+            max-width: 120px !important;
         }
     }
     </style>
 
-    <!-- VAPI Widget HTML -->
+    <!-- VAPI Widget HTML Structure -->
     <div id="vapi-hybrid-widget">
-        <div id="vapi-tooltip">Chat with Sophie • Green Star Solar Expert</div>
-        
-        <button id="vapi-chat-button" aria-label="Open chat">
-            <img src="https://lirp.cdn-website.com/8f142869/dms3rep/multi/opt/Greenstar_Solar_Logo_WHITE.TAG_STACKED-3x-488w.png" 
-                 alt="Chat" style="width: 42px; height: 42px; filter: brightness(0) invert(1);">
-        </button>
-        
-        <div id="vapi-chat-panel">
-            <div id="vapi-chat-header">
-                <h3 id="vapi-chat-title">Sophie • Green Star Assistant</h3>
-                <button id="vapi-close-button" aria-label="Close chat">×</button>
-            </div>
-            
-            <div id="vapi-text-messages"></div>
-            <div id="vapi-voice-messages"></div>
-            
-            <div id="vapi-input-area">
-                <div id="vapi-mode-toggle">
-                    <button class="vapi-mode-button active" data-mode="text">💬 Text Chat</button>
-                    <button class="vapi-mode-button" data-mode="voice">🎤 Voice Call</button>
-                </div>
+      <div id="vapi-tooltip">Chat with Sophie • Green Star Solar Expert</div>
+      
+      <button id="vapi-chat-button" aria-label="Open chat">
+        <!-- Green Spiral Logo SVG -->
+        <svg width="28" height="28" viewBox="0 0 100 100" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+            <g transform="translate(50, 50)">
+                <!-- Outer spiral dots -->
+                <circle cx="0" cy="-25" r="1.5" fill="#adae88" opacity="1">
+                    <animateTransform attributeName="transform" type="rotate" values="0;360" dur="8s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="17.7" cy="-17.7" r="1.4" fill="#adae88" opacity="0.9">
+                    <animateTransform attributeName="transform" type="rotate" values="45;405" dur="8s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="25" cy="0" r="1.3" fill="#adae88" opacity="0.8">
+                    <animateTransform attributeName="transform" type="rotate" values="90;450" dur="8s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="17.7" cy="17.7" r="1.2" fill="#adae88" opacity="0.7">
+                    <animateTransform attributeName="transform" type="rotate" values="135;495" dur="8s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="0" cy="25" r="1.1" fill="#adae88" opacity="0.6">
+                    <animateTransform attributeName="transform" type="rotate" values="180;540" dur="8s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="-17.7" cy="17.7" r="1.0" fill="#adae88" opacity="0.5">
+                    <animateTransform attributeName="transform" type="rotate" values="225;585" dur="8s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="-25" cy="0" r="0.9" fill="#adae88" opacity="0.4">
+                    <animateTransform attributeName="transform" type="rotate" values="270;630" dur="8s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="-17.7" cy="-17.7" r="0.8" fill="#adae88" opacity="0.3">
+                    <animateTransform attributeName="transform" type="rotate" values="315;675" dur="8s" repeatCount="indefinite"/>
+                </circle>
                 
-                <div id="vapi-text-input-container">
-                    <input type="text" id="vapi-message-input" placeholder="Ask about solar panels, installations, pricing..." />
-                    <button id="vapi-send-button">Send</button>
-                </div>
+                <!-- Middle ring -->
+                <circle cx="0" cy="-15" r="1.2" fill="#adae88" opacity="0.8">
+                    <animateTransform attributeName="transform" type="rotate" values="0;-360" dur="6s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="10.6" cy="-10.6" r="1.1" fill="#adae88" opacity="0.7">
+                    <animateTransform attributeName="transform" type="rotate" values="45;-315" dur="6s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="15" cy="0" r="1.0" fill="#adae88" opacity="0.6">
+                    <animateTransform attributeName="transform" type="rotate" values="90;-270" dur="6s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="10.6" cy="10.6" r="0.9" fill="#adae88" opacity="0.5">
+                    <animateTransform attributeName="transform" type="rotate" values="135;-225" dur="6s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="0" cy="15" r="0.8" fill="#adae88" opacity="0.4">
+                    <animateTransform attributeName="transform" type="rotate" values="180;-180" dur="6s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="-10.6" cy="10.6" r="0.7" fill="#adae88" opacity="0.3">
+                    <animateTransform attributeName="transform" type="rotate" values="225;-135" dur="6s" repeatCount="indefinite"/>
+                </circle>
                 
-                <div id="vapi-voice-controls">
-                    <button id="vapi-voice-button">🎤 Start Voice Call</button>
-                </div>
-            </div>
+                <!-- Inner core -->
+                <circle cx="0" cy="-8" r="0.8" fill="#adae88" opacity="0.9">
+                    <animateTransform attributeName="transform" type="rotate" values="0;360" dur="4s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="5.7" cy="-5.7" r="0.7" fill="#adae88" opacity="0.8">
+                    <animateTransform attributeName="transform" type="rotate" values="45;405" dur="4s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="8" cy="0" r="0.6" fill="#adae88" opacity="0.7">
+                    <animateTransform attributeName="transform" type="rotate" values="90;450" dur="4s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="5.7" cy="5.7" r="0.5" fill="#adae88" opacity="0.6">
+                    <animateTransform attributeName="transform" type="rotate" values="135;495" dur="4s" repeatCount="indefinite"/>
+                </circle>
+                
+                <!-- Center dot -->
+                <circle cx="0" cy="0" r="1.5" fill="#adae88" opacity="1">
+                    <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+                </circle>
+            </g>
+        </svg>
+      </button>
+
+      <!-- Complete Chat Panel -->
+      <div id="vapi-chat-panel" role="dialog" aria-labelledby="vapi-chat-title" class="vapi-text-mode">
+        <!-- Header -->
+        <div id="vapi-chat-header">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <h3 id="vapi-chat-title">Sophie • Green Star Assistant</h3>
+          </div>
+          <button id="vapi-close-button" aria-label="Close">×</button>
         </div>
+
+        <!-- Messages -->
+        <div id="vapi-text-messages" role="log" aria-live="polite">
+          <div class="vapi-message vapi-message-assistant">
+            Hello! I'm Sophie, your Green Star Solar assistant. I can help you with solar panel information, installation details, and pricing questions. How can I assist you today?
+          </div>
+        </div>
+
+        <div id="vapi-voice-messages" role="log" aria-live="polite"></div>
+
+        <!-- Input Area -->
+        <div id="vapi-input-area">
+          <!-- Mode Toggle -->
+          <div id="vapi-mode-toggle">
+            <button class="vapi-mode-button active" data-mode="text">Text Chat</button>
+            <button class="vapi-mode-button" data-mode="voice">Voice Call</button>
+          </div>
+
+          <!-- Text Input -->
+          <div id="vapi-text-input-container">
+            <input
+              id="vapi-message-input"
+              type="text"
+              placeholder="Ask about solar panels, installations, pricing..."
+              aria-label="Message to Sophie"
+              autocomplete="off"
+              maxlength="500"
+            >
+            <button id="vapi-send-button" aria-label="Send message">Send</button>
+          </div>
+
+          <!-- Voice Controls -->
+          <div id="vapi-voice-controls">
+            <button id="vapi-voice-button" aria-label="Start voice call with Sophie">Start Call</button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- VAPI Widget JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/@vapi-ai/web@latest/dist/index.js"></script>
-    <script>
-    // Complete VAPI Widget Implementation
-    (function() {
-        'use strict';
+    <script src="https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js"></script>
 
-        // Security utilities
-        const SECURITY = {
-            requestCount: 0,
-            lastRequestTime: Date.now(),
-            maxRequestsPerMinute: 20,
-            
-            sanitizeInput: function(text) {
-              if (!text || typeof text !== 'string') return '';
-              return text.replace(/[<>&"']/g, function(char) {
-                const chars = {
-                  '<': '&lt;',
-                  '>': '&gt;',
-                  '&': '&amp;',
-                  '"': '&quot;',
-                  "'": '&#39;'
-                };
-                return chars[char] || char;
-              });
-            },
-            
-            checkRateLimit: function() {
-              const now = Date.now();
-              if (now - this.lastRequestTime > 60000) {
-                this.requestCount = 0;
-                this.lastRequestTime = now;
-              }
-              
-              if (this.requestCount >= this.maxRequestsPerMinute) {
-                console.warn('Rate limit exceeded');
-                return false;
-              }
-              
-              this.requestCount++;
-              return true;
-            }
-        };
+    <script>
+    (function() {
+      'use strict';
+      
+      // Security utilities
+      const SECURITY = {
+        // Rate limiting
+        requestCount: 0,
+        lastRequestTime: 0,
+        maxRequestsPerMinute: 20,
         
-        // Configuration
-        const CONFIG = Object.freeze({
-            apiEndpoint: '/api/vapi-chat',
-            configEndpoint: '/api/vapi-config', 
-            fallbackEndpoint: 'https://api.vapi.ai/chat',
-            assistantId: null,
-            maxRetries: 3,
-            retryDelay: 1000
+        // Security monitoring
+        logSecurityEvent: function(event, details) {
+          if (typeof fetch === 'function') {
+            try {
+              fetch('/api/security/log', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                  event: event,
+                  details: details,
+                  timestamp: Date.now(),
+                  url: window.location.href
+                })
+              }).catch(() => {}); // Fail silently
+            } catch(e) {}
+          }
+        },
+        
+        // Input validation and sanitization
+        validateInput: function(input) {
+          if (!input || typeof input !== 'string') return false;
+          if (input.length > 500) return false;
+          if (/<script|javascript:|on\w+=/i.test(input)) {
+            this.logSecurityEvent('XSS_ATTEMPT', {input: input.substring(0, 100)});
+            return false;
+          }
+          if (input.includes('eval(') || input.includes('Function(')) {
+            this.logSecurityEvent('CODE_INJECTION_ATTEMPT', {input: input.substring(0, 100)});
+            return false;
+          }
+          return true;
+        },
+        
+        // Sanitize text content
+        sanitizeText: function(text) {
+          if (!text || typeof text !== 'string') return '';
+          return text.replace(/[<>&"']/g, function(char) {
+            const chars = {
+              '<': '&lt;',
+              '>': '&gt;',
+              '&': '&amp;',
+              '"': '&quot;',
+              "'": '&#39;'
+            };
+            return chars[char] || char;
+          });
+        },
+        
+        // Rate limiting check
+        checkRateLimit: function() {
+          const now = Date.now();
+          if (now - this.lastRequestTime > 60000) {
+            this.requestCount = 0;
+            this.lastRequestTime = now;
+          }
+          
+          if (this.requestCount >= this.maxRequestsPerMinute) {
+            this.logSecurityEvent('RATE_LIMIT_EXCEEDED', {count: this.requestCount});
+            return false;
+          }
+          
+          this.requestCount++;
+          return true;
+        }
+      };
+      
+      // Configuration with production credentials
+      const CONFIG = (function() {
+        return Object.freeze({
+          apiEndpoint: '/api/vapi/chat',
+          configEndpoint: '/api/vapi/config',
+          fallbackEndpoint: 'https://api.vapi.ai/chat',
+          publicKey: 'b3f38fb7-8541-4e3e-8708-5d49c3f54f00',
+          assistantId: 'a555d10b-c769-4959-8595-24673d6fbf37',
+          maxRetries: 3,
+          retryDelay: 1000
+        });
+      })();
+      
+      // Protected widget state
+      let widgetState = {
+        isOpen: false,
+        currentMode: 'text',
+        isVoiceActive: false,
+        vapiInstance: null,
+        previousChatId: null,
+        lastUserMessage: '',
+        config: null
+      };
+      
+      // Elements cache
+      const elements = {
+        button: document.getElementById('vapi-chat-button'),
+        panel: document.getElementById('vapi-chat-panel'),
+        closeButton: document.getElementById('vapi-close-button'),
+        textMessages: document.getElementById('vapi-text-messages'),
+        voiceMessages: document.getElementById('vapi-voice-messages'),
+        messageInput: document.getElementById('vapi-message-input'),
+        sendButton: document.getElementById('vapi-send-button'),
+        voiceButton: document.getElementById('vapi-voice-button'),
+        modeButtons: document.querySelectorAll('.vapi-mode-button'),
+        textInputContainer: document.getElementById('vapi-text-input-container'),
+        voiceControls: document.getElementById('vapi-voice-controls')
+      };
+      
+      // Initialize widget
+      async function initializeWidget() {
+        // Try to get secure configuration first
+        const hasSecureConfig = await initializeSecurely();
+        
+        if (!hasSecureConfig) {
+          // Use production credentials directly
+          initializeWithProductionConfig();
+        }
+        
+        // Set up event listeners
+        setupEventListeners();
+      }
+      
+      async function initializeSecurely() {
+        try {
+          const response = await fetch(CONFIG.configEndpoint);
+          if (response.ok) {
+            widgetState.config = await response.json();
+            return true;
+          }
+        } catch (error) {
+          console.log('Secure config unavailable, using production config');
+          SECURITY.logSecurityEvent('CONFIG_FALLBACK', {error: error.message});
+        }
+        return false;
+      }
+      
+      function initializeWithProductionConfig() {
+        // Set up VAPI instance with production credentials
+        if (typeof Vapi !== 'undefined') {
+          try {
+            widgetState.vapiInstance = new Vapi(CONFIG.publicKey);
+            setupVoiceEventListeners();
+            console.log('✅ VAPI initialized successfully with production credentials');
+          } catch (error) {
+            console.error('VAPI initialization failed:', error);
+            showFallbackMessage();
+          }
+        }
+      }
+      
+      function showFallbackMessage() {
+        const fallbackDiv = document.createElement('div');
+        fallbackDiv.className = 'vapi-message vapi-message-system';
+        fallbackDiv.textContent = '⚠️ Voice functionality temporarily unavailable. Please use text chat or refresh the page.';
+        elements.textMessages.appendChild(fallbackDiv);
+        
+        // Disable voice functionality
+        elements.modeButtons[1].style.opacity = '0.5';
+      }
+      
+      function setupEventListeners() {
+        // Widget open/close
+        elements.button?.addEventListener('click', toggleWidget);
+        elements.closeButton?.addEventListener('click', closeWidget);
+        
+        // Mode switching
+        elements.modeButtons.forEach(button => {
+          button.addEventListener('click', () => switchMode(button.dataset.mode));
         });
         
-        // Widget state
-        let widgetState = {
-            isOpen: false,
-            currentMode: 'text',
-            isVoiceActive: false,
-            vapiInstance: null,
-            previousChatId: null,
-            lastUserMessage: '',
-            config: null
-        };
+        // Text chat
+        elements.sendButton?.addEventListener('click', handleSendMessage);
+        elements.messageInput?.addEventListener('keypress', function(e) {
+          if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            handleSendMessage();
+          }
+        });
         
-        // Elements cache
-        const elements = {
-            button: document.getElementById('vapi-chat-button'),
-            panel: document.getElementById('vapi-chat-panel'),
-            closeButton: document.getElementById('vapi-close-button'),
-            textMessages: document.getElementById('vapi-text-messages'),
-            voiceMessages: document.getElementById('vapi-voice-messages'),
-            messageInput: document.getElementById('vapi-message-input'),
-            sendButton: document.getElementById('vapi-send-button'),
-            voiceButton: document.getElementById('vapi-voice-button'),
-            modeButtons: document.querySelectorAll('.vapi-mode-button'),
-            textInputContainer: document.getElementById('vapi-text-input-container'),
-            voiceControls: document.getElementById('vapi-voice-controls')
-        };
+        // Voice chat
+        elements.voiceButton?.addEventListener('click', handleVoiceToggle);
         
-        // Initialize widget
-        async function initializeWidget() {
-            // Try to get secure configuration first
-            const hasSecureConfig = await initializeSecurely();
-            
-            if (!hasSecureConfig) {
-                // Fallback: Show demo mode message
-                showDemoMode();
-            }
-            
-            // Set up VAPI instance with demo config if available
-            if (typeof Vapi !== 'undefined') {
-                try {
-                    // Demo configuration - replace with your actual assistant ID
-                    widgetState.vapiInstance = new Vapi({
-                        apiKey: 'demo-key', // Replace with your public API key
-                        assistant: 'demo-assistant-id' // Replace with your assistant ID
-                    });
-                    
-                    setupVoiceEventListeners();
-                } catch (error) {
-                    console.log('VAPI initialization failed, running in text-only mode');
-                }
-            }
-            
-            // Set up event listeners
-            setupEventListeners();
-            
-            // Add welcome message
-            addMessage('assistant', 'Hello! I\'m Sophie, your Green Star Solar assistant. I can help you with solar panel information, installation details, and pricing questions. How can I assist you today?');
-        }
+        // Close on outside click
+        document.addEventListener('click', function(e) {
+          if (widgetState.isOpen && !e.target.closest('#vapi-hybrid-widget')) {
+            closeWidget();
+          }
+        });
+      }
+      
+      function setupVoiceEventListeners() {
+        if (!widgetState.vapiInstance) return;
         
-        async function initializeSecurely() {
-            try {
-                const response = await fetch(CONFIG.configEndpoint);
-                if (response.ok) {
-                    widgetState.config = await response.json();
-                    return true;
-                }
-            } catch (error) {
-                console.log('Secure config unavailable, using demo mode');
-            }
-            return false;
-        }
+        widgetState.vapiInstance.on('call-start', () => {
+          widgetState.isVoiceActive = true;
+          elements.voiceButton.className = 'active';
+          elements.voiceButton.textContent = 'End Call';
+          widgetState.lastUserMessage = '';
+          addVoiceMessage('Call started. Speak now...', 'system');
+        });
         
-        function showDemoMode() {
-            const demoDiv = document.createElement('div');
-            demoDiv.className = 'vapi-message vapi-message-system';
-            demoDiv.textContent = '🚀 Demo Mode: This is a preview of our chat interface. Full voice functionality requires backend configuration.';
-            elements.textMessages.appendChild(demoDiv);
-            
-            // Disable voice functionality in demo
-            elements.modeButtons[1].style.display = 'none';
-        }
+        widgetState.vapiInstance.on('call-end', () => {
+          widgetState.isVoiceActive = false;
+          elements.voiceButton.className = '';
+          elements.voiceButton.textContent = 'Start Call';
+          addVoiceMessage('Call ended.', 'system');
+        });
         
-        function setupEventListeners() {
-            // Widget open/close
-            elements.button?.addEventListener('click', toggleWidget);
-            elements.closeButton?.addEventListener('click', closeWidget);
-            
-            // Mode switching
-            elements.modeButtons.forEach(button => {
-                button.addEventListener('click', () => switchMode(button.dataset.mode));
-            });
-            
-            // Text chat
-            elements.sendButton?.addEventListener('click', handleSendMessage);
-            elements.messageInput?.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter' && !e.shiftKey) {
-                    e.preventDefault();
-                    handleSendMessage();
-                }
-            });
-            
-            // Voice chat
-            elements.voiceButton?.addEventListener('click', handleVoiceToggle);
-            
-            // Close on outside click
-            document.addEventListener('click', function(e) {
-                if (widgetState.isOpen && !e.target.closest('#vapi-hybrid-widget')) {
-                    closeWidget();
-                }
-            });
-        }
+        widgetState.vapiInstance.on('speech-start', () => {
+          addVoiceMessage('Listening...', 'system');
+        });
         
-        function setupVoiceEventListeners() {
-            if (!widgetState.vapiInstance) return;
-            
-            widgetState.vapiInstance.on('call-start', () => {
-                widgetState.isVoiceActive = true;
-                elements.voiceButton.classList.add('active');
-                elements.voiceButton.textContent = '🔴 End Call';
-                addVoiceMessage('system', 'Voice call started. Speak now...');
-            });
-            
-            widgetState.vapiInstance.on('call-end', () => {
-                widgetState.isVoiceActive = false;
-                elements.voiceButton.classList.remove('active');
-                elements.voiceButton.textContent = '🎤 Start Voice Call';
-                addVoiceMessage('system', 'Voice call ended');
-            });
-            
-            widgetState.vapiInstance.on('speech-start', () => {
-                addVoiceMessage('system', 'Listening...');
-            });
-            
-            widgetState.vapiInstance.on('speech-end', (transcript) => {
-                if (transcript?.transcript) {
-                    addVoiceMessage('user', transcript.transcript);
-                    widgetState.lastUserMessage = transcript.transcript;
-                }
-            });
-            
-            widgetState.vapiInstance.on('message', (message) => {
-                if (message?.content) {
-                    addVoiceMessage('assistant', message.content);
-                }
-            });
-            
-            widgetState.vapiInstance.on('error', (error) => {
-                console.error('VAPI Error:', error);
-                addVoiceMessage('system', 'Voice error occurred. Please try again.');
-                widgetState.isVoiceActive = false;
-                elements.voiceButton.classList.remove('active');
-                elements.voiceButton.textContent = '🎤 Start Voice Call';
-            });
-        }
+        widgetState.vapiInstance.on('speech-end', (data) => {
+          if (data?.transcript) {
+            widgetState.lastUserMessage = data.transcript;
+            addVoiceMessage(data.transcript, 'user');
+          }
+        });
         
-        function toggleWidget() {
-            if (widgetState.isOpen) {
-                closeWidget();
-            } else {
-                openWidget();
-            }
-        }
+        widgetState.vapiInstance.on('message', (message) => {
+          if (message?.content) {
+            addVoiceMessage(message.content, 'assistant');
+          }
+        });
         
-        function openWidget() {
-            widgetState.isOpen = true;
-            elements.panel.classList.add('open');
-            elements.messageInput?.focus();
-        }
-        
-        function closeWidget() {
-            widgetState.isOpen = false;
-            elements.panel.classList.remove('open');
-            
-            // End voice call if active
-            if (widgetState.isVoiceActive && widgetState.vapiInstance) {
-                widgetState.vapiInstance.stop();
-            }
-        }
-        
-        function switchMode(mode) {
-            if (mode === widgetState.currentMode) return;
-            
-            widgetState.currentMode = mode;
-            
-            // Update button states
-            elements.modeButtons.forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.mode === mode);
-            });
-            
-            // Show/hide appropriate controls
-            if (mode === 'text') {
-                elements.textMessages.style.display = 'flex';
-                elements.voiceMessages.style.display = 'none';
-                elements.textInputContainer.style.display = 'flex';
-                elements.voiceControls.style.display = 'none';
-            } else {
-                elements.textMessages.style.display = 'none';
-                elements.voiceMessages.style.display = 'flex';
-                elements.textInputContainer.style.display = 'none';
-                elements.voiceControls.style.display = 'block';
-            }
-        }
-        
-        async function handleSendMessage() {
-            const message = elements.messageInput.value.trim();
-            if (!message || !SECURITY.checkRateLimit()) return;
-            
-            const sanitizedMessage = SECURITY.sanitizeInput(message);
-            elements.messageInput.value = '';
-            
-            // Add user message
-            addMessage('user', sanitizedMessage);
-            
-            // Show typing indicator
-            const typingDiv = addMessage('assistant', 'Sophie is typing...');
-            
-            try {
-                // Call actual backend API
-                const response = await fetch(CONFIG.apiEndpoint, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        message: sanitizedMessage,
-                        chatId: widgetState.previousChatId
-                    })
-                });
-                
-                // Remove typing indicator
-                typingDiv.remove();
-                
-                if (response.ok) {
-                    const data = await response.json();
-                    widgetState.previousChatId = data.chatId;
-                    addMessage('assistant', data.response);
-                } else {
-                    // Fallback to demo response if API fails
-                    const fallbackResponse = generateDemoResponse(sanitizedMessage);
-                    addMessage('assistant', fallbackResponse);
-                }
-                
-            } catch (error) {
-                console.error('Chat API error:', error);
-                typingDiv.remove();
-                
-                // Fallback to demo response on error
-                const fallbackResponse = generateDemoResponse(sanitizedMessage);
-                addMessage('assistant', fallbackResponse);
-            }
-        }
-        
-        function generateDemoResponse(message) {
-            const lowerMessage = message.toLowerCase();
-            
-            if (lowerMessage.includes('solar') || lowerMessage.includes('panel')) {
-                return "Great question about solar panels! Our Aiko Neostar 2S panels offer up to 23.1% efficiency with a 25-year product warranty. They're perfect for UK homes and can significantly reduce your electricity bills. Would you like to know more about installation or pricing?";
-            } else if (lowerMessage.includes('price') || lowerMessage.includes('cost')) {
-                return "Solar panel pricing depends on your home's specific needs and energy requirements. Our systems typically range from £6,000-£15,000 including installation. We offer free consultations to provide accurate quotes. Would you like to schedule a consultation?";
-            } else if (lowerMessage.includes('installation')) {
-                return "Our installation process is simple: 1) Free consultation and site survey, 2) Custom system design, 3) Professional installation by certified installers, 4) System activation and grid connection. The whole process typically takes 1-2 days for installation. Shall I book you a consultation?";
-            } else if (lowerMessage.includes('battery') || lowerMessage.includes('storage')) {
-                return "Battery storage is a great addition to solar panels! Our Fox ESS and SolarEdge batteries store excess energy for use during peak times or power outages. This can increase your savings by up to 30%. Would you like details about battery options?";
-            } else if (lowerMessage.includes('warranty')) {
-                return "We offer comprehensive warranties: 25-year product warranty on Aiko Neostar panels, 30-year performance warranty, and full installation warranty. Our panels have minimal degradation (≤0.3% annually) ensuring long-term performance.";
-            } else {
-                return "Thanks for your question! I'm here to help with solar panel information, installation details, pricing, and technical specifications. Feel free to ask about our Aiko Neostar panels, battery storage options, or installation process. How can I assist you specifically?";
-            }
-        }
-        
-        function handleVoiceToggle() {
-            if (!widgetState.vapiInstance) {
-                addVoiceMessage('system', 'Voice functionality requires backend configuration. Please contact support for full setup.');
-                return;
-            }
-            
-            if (widgetState.isVoiceActive) {
-                widgetState.vapiInstance.stop();
-            } else {
-                widgetState.vapiInstance.start({
-                    assistant: widgetState.config?.assistantId || 'demo-assistant'
-                });
-            }
-        }
-        
-        function addMessage(type, content) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `vapi-message vapi-message-${type}`;
-            messageDiv.innerHTML = SECURITY.sanitizeInput(content);
-            
-            elements.textMessages.appendChild(messageDiv);
-            elements.textMessages.scrollTop = elements.textMessages.scrollHeight;
-            
-            return messageDiv;
-        }
-        
-        function addVoiceMessage(type, content) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `vapi-voice-message vapi-voice-message-${type}`;
-            messageDiv.innerHTML = SECURITY.sanitizeInput(content);
-            
-            elements.voiceMessages.appendChild(messageDiv);
-            elements.voiceMessages.scrollTop = elements.voiceMessages.scrollHeight;
-            
-            return messageDiv;
-        }
-        
-        // Initialize when DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initializeWidget);
+        widgetState.vapiInstance.on('error', (error) => {
+          console.error('VAPI Error:', error);
+          addVoiceMessage('An error occurred. Please try again.', 'system');
+          if (widgetState.isVoiceActive) {
+            widgetState.vapiInstance?.stop();
+          }
+        });
+      }
+      
+      function toggleWidget() {
+        if (widgetState.isOpen) {
+          closeWidget();
         } else {
-            initializeWidget();
+          openWidget();
         }
+      }
+      
+      function openWidget() {
+        widgetState.isOpen = true;
+        elements.panel?.classList.add('open');
+        elements.messageInput?.focus();
+      }
+      
+      function closeWidget() {
+        widgetState.isOpen = false;
+        elements.panel?.classList.remove('open');
+        
+        if (widgetState.isVoiceActive && widgetState.vapiInstance) {
+          widgetState.vapiInstance.stop();
+        }
+      }
+      
+      function switchMode(mode) {
+        if (mode === widgetState.currentMode) return;
+        
+        widgetState.currentMode = mode;
+        
+        // Update UI
+        elements.modeButtons.forEach(btn => btn.classList.remove('active'));
+        document.querySelector(`[data-mode="${mode}"]`)?.classList.add('active');
+        
+        if (mode === 'text') {
+          elements.textMessages.style.display = 'flex';
+          elements.voiceMessages.style.display = 'none';
+          elements.textInputContainer.style.display = 'flex';
+          elements.voiceControls.style.display = 'none';
+          elements.panel?.classList.add('vapi-text-mode');
+          elements.panel?.classList.remove('vapi-voice-mode');
+        } else {
+          elements.textMessages.style.display = 'none';
+          elements.voiceMessages.style.display = 'flex';
+          elements.textInputContainer.style.display = 'none';
+          elements.voiceControls.style.display = 'block';
+          elements.panel?.classList.add('vapi-voice-mode');
+          elements.panel?.classList.remove('vapi-text-mode');
+        }
+      }
+      
+      async function handleSendMessage() {
+        const message = elements.messageInput?.value?.trim();
+        if (!message) return;
+        
+        // Security validation
+        if (!SECURITY.validateInput(message)) {
+          addTextMessage('Invalid message. Please avoid special characters and keep messages under 500 characters.', 'system');
+          return;
+        }
+        
+        // Rate limiting
+        if (!SECURITY.checkRateLimit()) {
+          addTextMessage('Too many requests. Please wait a moment before sending another message.', 'system');
+          return;
+        }
+        
+        const sanitizedMessage = SECURITY.sanitizeText(message);
+        elements.messageInput.value = '';
+        
+        addTextMessage(sanitizedMessage, 'user');
+        showTypingIndicator();
+        
+        try {
+          // First try secure backend endpoint
+          const response = await attemptSecureChat(sanitizedMessage);
+          if (response) {
+            hideTypingIndicator();
+            const assistantMessage = extractAssistantMessage(response);
+            if (assistantMessage) {
+              addTextMessage(assistantMessage, 'assistant');
+            }
+            return;
+          }
+        } catch (error) {
+          console.warn('Secure chat failed, using demo responses');
+          SECURITY.logSecurityEvent('SECURE_CHAT_FAILED', {error: error.message});
+        }
+        
+        hideTypingIndicator();
+        // Fallback to demo response
+        const fallbackResponse = generateDemoResponse(sanitizedMessage);
+        addTextMessage(fallbackResponse, 'assistant');
+      }
+      
+      async function attemptSecureChat(message) {
+        if (!CONFIG.apiEndpoint) return null;
+        
+        try {
+          const response = await fetch(CONFIG.apiEndpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              input: message,
+              previousChatId: widgetState.previousChatId
+            })
+          });
+          
+          if (response.ok) {
+            const data = await response.json();
+            if (data.chatId) {
+              widgetState.previousChatId = data.chatId;
+            }
+            return data;
+          }
+        } catch (error) {
+          console.warn('Secure backend unavailable');
+        }
+        
+        return null;
+      }
+      
+      function generateDemoResponse(message) {
+        const lowerMessage = message.toLowerCase();
+        
+        if (lowerMessage.includes('solar') || lowerMessage.includes('panel')) {
+          return "Great question about solar panels! Our Aiko Neostar 2S panels offer up to 23.1% efficiency with a 25-year product warranty. They're perfect for UK homes and can significantly reduce your electricity bills. Would you like to know more about installation or pricing?";
+        } else if (lowerMessage.includes('price') || lowerMessage.includes('cost')) {
+          return "Solar panel pricing depends on your home's specific needs and energy requirements. Our systems typically range from £6,000-£15,000 including installation. We offer free consultations to provide accurate quotes. Would you like to schedule a consultation?";
+        } else if (lowerMessage.includes('installation')) {
+          return "Our installation process is simple: 1) Free consultation and site survey, 2) Custom system design, 3) Professional installation by certified installers, 4) System activation and grid connection. The whole process typically takes 1-2 days for installation. Shall I book you a consultation?";
+        } else if (lowerMessage.includes('battery') || lowerMessage.includes('storage')) {
+          return "Battery storage is a great addition to solar panels! Our Fox ESS and SolarEdge batteries store excess energy for use during peak times or power outages. This can increase your savings by up to 30%. Would you like details about battery options?";
+        } else if (lowerMessage.includes('warranty')) {
+          return "We offer comprehensive warranties: 25-year product warranty on Aiko Neostar panels, 30-year performance warranty, and full installation warranty. Our panels have minimal degradation (≤0.3% annually) ensuring long-term performance.";
+        } else {
+          return "Thanks for your question! I'm here to help with solar panel information, installation details, pricing, and technical specifications. Feel free to ask about our Aiko Neostar panels, battery storage options, or installation process. How can I assist you specifically?";
+        }
+      }
+      
+      function handleVoiceToggle() {
+        if (!widgetState.vapiInstance) {
+          addVoiceMessage('Voice functionality requires secure configuration. Please contact support.', 'system');
+          return;
+        }
+        
+        if (widgetState.isVoiceActive) {
+          endVoiceCall();
+        } else {
+          startVoiceCall();
+        }
+      }
+      
+      function startVoiceCall() {
+        if (!widgetState.vapiInstance) {
+          addVoiceMessage('Voice service unavailable.', 'system');
+          return;
+        }
+        
+        try {
+          widgetState.vapiInstance.start(CONFIG.assistantId);
+        } catch (error) {
+          console.error('Failed to start voice call:', error);
+          SECURITY.logSecurityEvent('VOICE_START_ERROR', {error: error.message});
+          elements.voiceButton.className = '';
+          elements.voiceButton.textContent = 'Start Call';
+          addVoiceMessage('Failed to start call. Please try again.', 'system');
+        }
+      }
+      
+      function endVoiceCall() {
+        try {
+          widgetState.isVoiceActive = false;
+          elements.voiceButton.className = '';
+          elements.voiceButton.textContent = 'Start Call';
+          widgetState.vapiInstance?.stop();
+        } catch (error) {
+          console.error('Failed to end voice call:', error);
+        }
+      }
+      
+      function addTextMessage(text, sender) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `vapi-message vapi-message-${sender}`;
+        messageDiv.textContent = text; // Safe from XSS
+        elements.textMessages?.appendChild(messageDiv);
+        scrollToBottom(elements.textMessages);
+      }
+      
+      function addVoiceMessage(text, sender) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `vapi-voice-message vapi-voice-message-${sender}`;
+        messageDiv.textContent = text; // Safe from XSS
+        elements.voiceMessages?.appendChild(messageDiv);
+        scrollToBottom(elements.voiceMessages);
+      }
+      
+      function showTypingIndicator() {
+        hideTypingIndicator(); // Remove any existing indicator
+        
+        const typingDiv = document.createElement('div');
+        typingDiv.id = 'vapi-typing-indicator';
+        typingDiv.className = 'vapi-message vapi-message-assistant';
+        
+        // Safe static HTML for typing indicator
+        const dotsContainer = document.createElement('div');
+        dotsContainer.style.cssText = 'display: flex; align-items: center; gap: 6px; padding: 4px 0;';
+        
+        const label = document.createElement('span');
+        label.textContent = 'Sophie is typing';
+        label.style.marginRight = '8px';
+        dotsContainer.appendChild(label);
+        
+        // Create dots safely
+        for (let i = 0; i < 3; i++) {
+          const dot = document.createElement('div');
+          dot.style.cssText = `
+            width: 6px; height: 6px; background: currentColor; border-radius: 50%;
+            animation: pulse 1.5s infinite; animation-delay: ${i * 0.2}s; opacity: 0.4;
+          `;
+          dotsContainer.appendChild(dot);
+        }
+        
+        typingDiv.appendChild(dotsContainer);
+        elements.textMessages?.appendChild(typingDiv);
+        scrollToBottom(elements.textMessages);
+      }
+      
+      function hideTypingIndicator() {
+        const indicator = document.getElementById('vapi-typing-indicator');
+        if (indicator) {
+          indicator.remove();
+        }
+      }
+      
+      function scrollToBottom(element) {
+        if (element) {
+          element.scrollTop = element.scrollHeight;
+        }
+      }
+      
+      function extractAssistantMessage(data) {
+        if (data?.output && Array.isArray(data.output) && data.output.length > 0) {
+          const lastOutput = data.output[data.output.length - 1];
+          if (lastOutput?.content) return lastOutput.content;
+        }
+        
+        if (data?.message) return data.message;
+        if (data?.response) return data.response;
+        if (typeof data === 'string') return data;
+        
+        return 'I apologize, but I encountered an issue processing your request. Please try again.';
+      }
+      
+      // Initialize on DOM ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeWidget);
+      } else {
+        initializeWidget();
+      }
+      
     })();
     </script>
 </body>
